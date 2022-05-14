@@ -1,6 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a178f54e-50f2-42b7-85b4-283217917e6d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="27k9WChYJ5W9FaVMOVjqTX4yX0i" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="D:/Users/natac/Documents NO onedrive/projet-antilope" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\wp-content\themes\no-air" />
+      <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\img" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a178f54e-50f2-42b7-85b4-283217917e6d" name="Changes" comment="" />
+      <created>1649853246108</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649853246108</updated>
+      <workItem from="1649853247414" duration="4149000" />
+      <workItem from="1649944995992" duration="8127000" />
+      <workItem from="1650021226785" duration="2316000" />
+      <workItem from="1650115470708" duration="12000" />
+      <workItem from="1650462574026" duration="5440000" />
+      <workItem from="1650546722066" duration="4314000" />
+      <workItem from="1650802297520" duration="33000" />
+      <workItem from="1650977168621" duration="5833000" />
+      <workItem from="1651041290927" duration="15000" />
+      <workItem from="1651070399203" duration="1480000" />
+      <workItem from="1651231264771" duration="2104000" />
+      <workItem from="1651351799477" duration="639000" />
+      <workItem from="1651441053477" duration="1517000" />
+      <workItem from="1651474703765" duration="1228000" />
+      <workItem from="1651576733285" duration="56000" />
+      <workItem from="1651674568142" duration="2586000" />
+      <workItem from="1652014915276" duration="1707000" />
+      <workItem from="1652088790629" duration="1258000" />
+      <workItem from="1652119720010" duration="29000" />
+      <workItem from="1652212529730" duration="872000" />
+      <workItem from="1652213424971" duration="3868000" />
+      <workItem from="1652250524014" duration="27000" />
+      <workItem from="1652553702688" duration="3016000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
