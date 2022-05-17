@@ -8,22 +8,48 @@
     <meta name="description" content="Site répertoriant des modules qui mesurent la qualité de l'air">
     <meta name="keywords" content="mesures, pollution, qualité, air, système embarqué, capteurs">
     <link rel="stylesheet" href="style.css">
-    <title>NoAir</title>
+
+    <?php wp_head(); ?>
+
+    <title><?= is_front_page() ? 'NOair, mesure la qualité de l\'air' : wp_title('NOair |') ?></title>
 </head>
 <body>
 <header>
-    <h1>NoAir - Mesure la qualité de l'air </h1>
+    <h1><?= the_title() ?></h1>
     <!-- mettre des span pour qualifier la page. si page de contact alors Contactez-moi span natacha belboom -->
     <!-- a faire en php -->
-    <img src="" alt="logo">
-    <nav role="navigation">
-        <h2>La navigation principale</h2>
-        <ul role="list">
-            <li role="menuitem"><a href="../../../sans-wordpress/index.php" title="Aller sur la page d'accueil">Accueil</a></li>
-            <li role="menuitem"><a href="../../../sans-wordpress/products.php" title="Aller sur la page des modules">Nos modules</a></li>
-            <li role="menuitem"><a href="../../../sans-wordpress/about.php" title="Aller sur la page à propos">Qui sommes-nous?</a></li>
-            <li role="menuitem"><a href="../../../sans-wordpress/publications.php" title="Aller sur la page presse">NoAir dans la presse</a></li>
-            <li role="menuitem"><a href="../../../sans-wordpress/contact.php" title="Aller sur la page de contact">Contact</a></li>
+    <a href="">
+        <img src="/" alt="logo">
+    </a>
+    <nav class="header__nav nav" role="navigation">
+        <h2 class="nav__title">
+            <?= __('Navigation principale', 'noair') ?>
+        </h2>
+        <ul class="nav__container">
+            <?php foreach (noair_get_menu_items('primary') as $link): ?>  <!--la fonction renvoie un tableau d'item-->
+                <li class="<?= $link->getBemClasses('nav__item') ?>">
+                    <a href="<?= $link->url ?>" class="nav__link"><?= $link->label ?></a>
+                    <?php if($link->hasSubItems()): ?>
+                        <ul class="nav__subitems">
+                            <?php foreach ($link->subitems as $sub): ?>
+                                <li class="<?= $link->getBemClasses('nav__subitem') ?>">
+                                    <a href="<?= $sub->url ?>" class="nav__link"><?= $sub->label ?></a>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                </li>
+            <?php endforeach; ?>
         </ul>
+        <!--<div class="nav__languages">
+            <?php /*foreach(pll_the_languages(['raw' => true]) as $code => $locale): */?>
+                <a href="<?/*= $locale['url'] */?>" title="<?/*= $locale['name'] */?>" lang="<?/*= $locale['locale'] */?>" hreflang="<?/*= $locale['locale'] */?>" class="nav__locale">
+                    <?/*= $code */?>
+                </a>
+            <?php /*endforeach; */?>
+        </div>
+        <div class="nav__cta">
+            <a href="<?/*= get_permalink(dw_get_template_page('template-contact')) */?>" class="nav__contact"><?/*= __('Prendre contact', 'dw') */?></a>
+        </div>-->
     </nav>
 </header>

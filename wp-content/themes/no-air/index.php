@@ -3,62 +3,47 @@ include 'header.php'
 ?>
 
 <main>
-    <section>
-        <h2>NoAir</h2>
-        <img src="" alt="">
+    <div>
+        <figure class="post__fig">
+            <?= get_the_post_thumbnail(null, 'large', ['class' => 'post__thumb']) ?>
+        </figure>
         <p>Identifier les types de pollution et en estimer le degré d'exposition pour la population:</p>
         <p>Un défi de santé publique que nous avons décidé de relever !</p>
-        <a href="products.php">Découvrez nos modules<img src="" alt="icone de flèche pointant vers la droite"></a>
-    </section>
+        <a href="">Découvrez nos modules<img src="" alt="icone de flèche pointant vers la droite"></a>
+    </div>
     <section>
         <div>
             <h2><span>Qu'est-ce que</span>Le projet NOair</h2>
-            <p>
-                7 millions de victimes par an dans le monde !
-                La pollution de l'air est le facteur environnemental qui affecte le plus la santé de la population mondiale. Il est donc crucial de mesurer, réduire les émissions polluantes et informer le grand public. C'est l'objectif du projet NOair.
-            </p>
-            <a href="about.php">En savoir plus <span class="sro">sur NOair</span><img src="" alt="icone de flèche pointant vers la droite"></a>
+            <p><?= get_field('about_text'); ?></p>
+            <a href="">En savoir plus <span class="sro">sur NOair</span><img src="" alt="icone de flèche pointant vers la droite"></a>
         </div>
         <div>
-            <video src="" controls></video>
+            <?= get_field('about_video'); ?>
         </div>
     </section>
     <section>
         <div>
-            <h2><span>Découvrez</span>Nos modules</h2>
-            <a href="products.php">En savoir plus <span class="sro">sur les modules</span> <img src="" alt="icone de flèche pointant vers la droite"></a>
+            <h2><span>Découvrez</span>Nos modules phares</h2>
+            <a href="<?= get_post_type_archive_link('product'); ?>">Les voir tous <img src="" alt="icone de flèche pointant vers la droite"></a>
         </div>
         <div>
-            <div>
-                <img src="" alt="logo de Antilope">
-                <h3>Antilope</h3>
-                <p>Signification</p>
-                <a href="single-product.php">En savoir plus <span class="sro">sur le module antilope</span><img src="" alt="icone de flèche pointant vers la droite"></a>
-            </div>
-            <div>
-                <img src="" alt="logo de Saiga">
-                <h3>Saïga</h3>
-                <p>Signification</p>
-                <a href="single-product.php">En savoir plus <span class="sro">sur le module antilope</span><img src="" alt="icone de flèche pointant vers la droite"></a>
-            </div>
-            <div>
-                <img src="" alt="logo de Oryx">
-                <h3>Oryx</h3>
-                <p>Signification</p>
-                <a href="single-product.php">En savoir plus <span class="sro">sur le module antilope</span><img src="" alt="icone de flèche pointant vers la droite"></a>
-            </div>
+            <?php if (($products = noair_get_products(3))->have_posts()) : while ($products->have_posts()) : $products->the_post();
+                noair_include('product', ['modifier' => 'index']);
+            endwhile; else: ?>
+                <p class="projects__empty"></p>
+            <?php endif; ?>
         </div>
     </section>
     <section>
         <div>
             <h2><span>Quels sont </span>Les polluants mesurés</h2>
-            <p>NO, NO2, PM1, O3, CO2, CO, NH3, …
-                Toutes ces micro-particules polluantes se retrouvent dans l'air que nous respirons. Elles proviennent de la combustion des énergies fossiles, des vapeurs industrielles, de réactions chimiques causées par le soleil, par l'activité agricole, ...</p>
+            <?php var_dump(get_field('pollution_text')); ?>
+            <p><?php echo get_field('pollution_text'); ?></p>
             <a href="">En savoir plus <span class="sro">sur les polluants</span><img src="" alt="icone de flèche pointant vers la droite"></a>
         </div>
-        <div>
-            <img src="" alt="">
-        </div>
+        <!--<div>
+            <img <?/*= noair_the_img_attributes('pollution_img', ['thumbnail', 'medium', 'large']); */?>>
+        </div>-->
     </section>
     <section>
         <h2><span>En collaboration avec</span>Nos partenaires</h2>
