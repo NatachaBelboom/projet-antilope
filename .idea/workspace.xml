@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a178f54e-50f2-42b7-85b4-283217917e6d" name="Changes" comment="add custom theme">
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Menus/MenuItem.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/archive-product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-about.php" afterDir="false" />
+    <list default="true" id="a178f54e-50f2-42b7-85b4-283217917e6d" name="Changes" comment="work in progress">
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/BaseFormController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/ContactFormController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/Sanitizers/BaseSanitizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/Sanitizers/EmailSanitizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/Sanitizers/TextSanitizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/Validators/AcceptedValidator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/Validators/BaseValidator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/Validators/EmailValidator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/Validators/RequiredValidator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/partner.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-contact.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-pollution.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-publications.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/projet-antilope.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projet-antilope.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/archive-product.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/archive-product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/single-product.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/single-product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-about.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-about.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +55,7 @@
       <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\wp-content\themes\no-air" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\sans-wordpress" />
       <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\wp-content\themes\no-air" />
       <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\img" />
     </key>
@@ -76,7 +92,10 @@
       <workItem from="1652250524014" duration="27000" />
       <workItem from="1652553702688" duration="7387000" />
       <workItem from="1652703341915" duration="12137000" />
-      <workItem from="1652785147291" duration="7349000" />
+      <workItem from="1652785147291" duration="13740000" />
+      <workItem from="1652800126581" duration="627000" />
+      <workItem from="1652871781845" duration="61000" />
+      <workItem from="1652886256832" duration="9160000" />
     </task>
     <task id="LOCAL-00001" summary="add custom theme">
       <created>1652558054610</created>
@@ -92,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652558075462</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="work in progress">
+      <created>1652794115620</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652794115620</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,6 +138,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add custom theme" />
-    <option name="LAST_COMMIT_MESSAGE" value="add custom theme" />
+    <MESSAGE value="work in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="work in progress" />
   </component>
 </project>

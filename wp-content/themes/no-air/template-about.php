@@ -9,7 +9,13 @@
         <section>
             <h2><span>Qu'est-ce que</span>NOair</h2>
             <div>
-                <img <?= noair_the_img_attributes('image1', ['thumbnail', 'medium', 'large']); ?>>
+                <?= wp_get_attachment_image(get_field('image1'),'large', false, array('class' => '')); ?>
+                <p>7 millions de victimes par an dans le monde !
+                    La pollution de l'air est le facteur environnemental qui affecte le plus la santé de la population mondiale. Il est donc crucial de mesurer, réduire les émissions polluantes et informer le grand public. C'est l'objectif du projet NOair.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad blanditiis distinctio ea eum libero, nesciunt sint sit. Autem natus nisi reprehenderit sed veniam voluptate! Dolorum ex quas reiciendis totam ut!</p>
+                <?= wp_get_attachment_image(get_field('image2'),'large', false, array('class' => '')); ?>
             </div>
 
         </section>
@@ -34,16 +40,7 @@
                     <p>L'ISSeP est l'Institut Scientifique de Service Public. Il exerce des activités scientifiques et techniques dans le domaine environnemental. L’ISSeP contribue à l’amélioration de notre environnement.</p>
                     <a href="https://www.issep.be/">Voir leur site</a>
                 </div>
-                <div>
-                    <img src="" alt="Logo de la section electronique">
-                    <p>La section électronique et systèmes embarqués est une section faisant partie du master ingénieur industriel de l'HEPL.</p>
-                    <a href="#">Voir leur site</a>
-                </div>
-                <div>
-                    <img src="" alt="Logo de l'issep">
-                    <p>La Haute Ecole de la Province de Liège est une haute école belge. Elle propose plusieurs formations de type différents dispersés dans 10 implantations à travers la province de Liège.</p>
-                    <a href="https://www.hepl.be/">Voir leur site</a>
-                </div>
+
             </div>
         </section>
         <section>
@@ -51,7 +48,7 @@
             <p>Nos produits vous plaisent? Envie d'avoir plus d'informations sur un module?
                 N'hésitez pas à nous contacter !
             </p>
-            <a href="contact.php">Contactez-nous <img src="" alt="icone de flèche pointant vers la droite"></a>
+            <a href="<?= get_permalink(noair_get_template_page('template-contact')); ?>">Contactez-nous <img src="" alt="icone de flèche pointant vers la droite"></a>
         </section>
     </main>
 

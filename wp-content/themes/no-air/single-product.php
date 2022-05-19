@@ -1,6 +1,4 @@
-<?php
-include 'header.php'
-?>
+<?php get_header(); ?>
 
     <main>
         <section>
@@ -79,7 +77,4 @@ include 'header.php'
                                                                                   alt="icone de flèche pointant vers la droite"></a>
             </section>
     </main>
-
-<?php
-include 'footer.php'
-?>
+<?php get_footer(); ?>

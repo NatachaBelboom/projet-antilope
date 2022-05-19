@@ -1,6 +1,15 @@
 <?php
 
 require_once(__DIR__ . '/Menus/MenuItem.php');
+require_once(__DIR__ . '/Forms/BaseFormController.php');
+require_once(__DIR__ . '/Forms/ContactFormController.php');
+require_once(__DIR__ . '/Forms/Sanitizers/BaseSanitizer.php');
+require_once(__DIR__ . '/Forms/Sanitizers/TextSanitizer.php');
+require_once(__DIR__ . '/Forms/Sanitizers/EmailSanitizer.php');
+require_once(__DIR__ . '/Forms/Validators/BaseValidator.php');
+require_once(__DIR__ . '/Forms/Validators/RequiredValidator.php');
+require_once(__DIR__ . '/Forms/Validators/EmailValidator.php');
+require_once(__DIR__ . '/Forms/Validators/AcceptedValidator.php');
 
 // Désactiver l'éditeur "Gutenberg" de Wordpress
 add_filter('use_block_editor_for_post', '__return_false');
@@ -23,6 +32,84 @@ register_post_type('product', [
     'rewrite' => ['slug' => 'modules'],
     'has_archive' => true,
 ]);
+
+register_post_type('pollution', [
+    'label' => 'Polluants',
+    'labels' => [ //Ecraser des valeurs par defaut
+        'name' => 'Polluants',
+        'singular_name' => 'Polluants',
+    ],
+    'description' => "La ressource permettant de gérer les polluants",
+    'public' => true, //accessible dans l'interface admin (formulaire de contact: false)
+    'menu_position' => 5,
+    'menu_icon' => 'dashicons-admin-site',
+    'supports' => ['title', 'editor', 'thumbnail'],
+    'rewrite' => ['slug' => 'pollution'],
+    'has_archive' => true,
+]);
+
+register_post_type('partner', [
+    'label' => 'Partenaires',
+    'labels' => [ //Ecraser des valeurs par defaut
+        'name' => 'Partenaires',
+        'singular_name' => 'Partenaires',
+    ],
+    'description' => "La ressource permettant de gérer les partenaires",
+    'public' => true, //accessible dans l'interface admin (formulaire de contact: false)
+    'menu_position' => 5,
+    'menu_icon' => 'dashicons-universal-access',
+    'supports' => ['title', 'editor', 'thumbnail'],
+    'rewrite' => ['slug' => 'partenaires'],
+    'has_archive' => true,
+]);
+
+register_post_type('message', [
+    'label' => 'Messages de contact',
+    'labels' => [ //Ecraser des valeurs par defaut
+        'name' => 'Messages de contact',
+        'singular_name' => 'Message de contact',
+    ],
+    'description' => "Les messages envoyés par les utilisateurs via le formulaire de contact",
+    'public' => false, //accessible dans l'interface admin (formulaire de contact: false)
+    'show_ui' => true,
+    'menu_position' => 10,
+    'menu_icon' => 'dashicons-buddicons-pm',
+    'capabilities' => [
+        'create_posts' => false, //enlever le bouton add new
+    ],
+    'map_meta_cap' => true,
+]);
+
+
+add_action('admin_post_submit_contact_form', 'dw_handle_submit_contact_form');
+
+function noair_handle_submit_contact_form()
+{
+    $form = new ContactFormController($_POST);
+}
+
+function noair_get_contact_field_value($field){
+
+    if(!isset($_SESSION['feedback_contact_form'])) {
+        return '';
+    }
+
+    return $_SESSION['feedback_contact_form']['data'][$field] ?? '';
+}
+
+function noair_get_contact_field_error($field)
+{
+    if(! isset($_SESSION['feedback_contact_form'])) {
+        return '';
+    }
+
+    if(! ($_SESSION['feedback_contact_form']['errors'][$field] ?? null)) {
+        return '';
+    }
+
+    return '<p class="form__error">Problème : ' . $_SESSION['feedback_contact_form']['errors'][$field] . '</p>';
+}
+
 
 
 //Enregistrer les menus de navigation
@@ -143,4 +230,19 @@ function noair_the_thumbnail_attributes($sizes = [])
 
     // 5. Retourner les attributs générés
     return 'src="' . $src . '" srcset="' . $srcset . '" alt="' . $alt . '"';
+}
+
+
+function noair_get_template_page(string $template)
+{
+    // 1. creer une wp-query
+    $query = new WP_Query([
+        'post_type' => 'page', // 2. filtrer sur le post type de type 'page'
+        'post_status' => 'publish', // 3. Uniquement les pages publiées
+        'meta_query' => [
+            ['key' => '_wp_page_template', 'value' => $template . '.php'] // 4. Filtrer sur le type de template utilisé
+        ]
+    ]);
+
+    return $query->posts[0] ?? null;    // 5. Retourner la premiere occurence pour cette requete (ou null)
 }

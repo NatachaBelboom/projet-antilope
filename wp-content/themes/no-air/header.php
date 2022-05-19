@@ -9,6 +9,7 @@
     <meta name="keywords" content="mesures, pollution, qualité, air, système embarqué, capteurs">
     <link rel="stylesheet" href="style.css">
 
+
     <?php wp_head(); ?>
 
     <title><?= is_front_page() ? 'NOair, mesure la qualité de l\'air' : wp_title('NOair |') ?></title>
