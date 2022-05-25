@@ -11,6 +11,16 @@ require_once(__DIR__ . '/Forms/Validators/RequiredValidator.php');
 require_once(__DIR__ . '/Forms/Validators/EmailValidator.php');
 require_once(__DIR__ . '/Forms/Validators/AcceptedValidator.php');
 
+add_action('init', 'dw_init_php_session', 1);
+
+function dw_init_php_session()
+{
+    if(!session_id()){
+        session_start();
+    }
+}
+
+
 // Désactiver l'éditeur "Gutenberg" de Wordpress
 add_filter('use_block_editor_for_post', '__return_false');
 
@@ -81,7 +91,8 @@ register_post_type('message', [
 ]);
 
 
-add_action('admin_post_submit_contact_form', 'dw_handle_submit_contact_form');
+// enregistrer le traitement du formulaire de contact personnalisé
+add_action('admin_post_submit_contact_form', 'noair_handle_submit_contact_form');
 
 function noair_handle_submit_contact_form()
 {
@@ -107,7 +118,7 @@ function noair_get_contact_field_error($field)
         return '';
     }
 
-    return '<p class="form__error">Problème : ' . $_SESSION['feedback_contact_form']['errors'][$field] . '</p>';
+    return '<p class="form__error">' . $_SESSION['feedback_contact_form']['errors'][$field] . '</p>';
 }
 
 
@@ -184,54 +195,6 @@ function noair_include(string $partial, array $variables = [])
     extract($variables);
     include(__DIR__ . '/partials/' . $partial . '.php');
 }
-
-
-function noair_the_img_attributes($id, $sizes = []) {
-    $src = wp_get_attachment_url($id);
-    $thumbnail_meta = get_post_meta($id);
-
-
-    $sizes = array_map(function ($size) use ($id) {
-        $data = wp_get_attachment_image_src($id, $size);
-
-
-        return $data[0] . ' ' . $data[1] . 'w';
-    }, $sizes);
-
-
-    $srcset = implode(', ', $sizes);
-    $alt = $thumbnail_meta['_wp_attachment_image_alt'][0] ?? null;
-
-
-    return 'src="' . $src . '" srcset="' . $srcset . '" alt="' . $alt . '"';
-}
-
-function noair_the_thumbnail_attributes($sizes = [])
-{
-    // 1. Récupérer le thumbnail pour le post courant dans the loop
-    $thumbnail = get_post(get_post_thumbnail_id());
-    $thumbnail_meta = get_post_meta($thumbnail->ID);
-    $src = null;
-
-    // 2. Récupérer les tailles d'image qui nous intéressent & formater les tailles pour qu'elles soient utilisables dans srcset
-    $sizes = array_map(function($size) use ($thumbnail, &$src) {
-        $data = wp_get_attachment_image_src($thumbnail->ID, $size);
-
-        if(is_null($src)) {
-            $src = $data[0];
-        }
-
-        return $data[0] . ' ' . $data[1] . 'w';
-    }, $sizes);
-
-    // 4. Formater les attributs
-    $srcset = implode(', ', $sizes);
-    $alt = $thumbnail_meta['_wp_attachment_image_alt'][0] ?? null;
-
-    // 5. Retourner les attributs générés
-    return 'src="' . $src . '" srcset="' . $srcset . '" alt="' . $alt . '"';
-}
-
 
 function noair_get_template_page(string $template)
 {

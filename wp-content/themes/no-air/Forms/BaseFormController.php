@@ -76,3 +76,4 @@ abstract class BaseFormController
 
     abstract protected function redirectWithSuccess();
 }
+

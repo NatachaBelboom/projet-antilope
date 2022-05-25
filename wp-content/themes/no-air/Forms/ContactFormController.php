@@ -13,6 +13,7 @@ class ContactFormController extends BaseFormController
             'firstname' => TextSanitizer::class,
             'lastname' => TextSanitizer::class,
             'email' => EmailSanitizer::class,
+            'phone' => TextSanitizer::class,
             'message' => TextSanitizer::class,
             'rules' => TextSanitizer::class,
         ];
@@ -70,3 +71,5 @@ class ContactFormController extends BaseFormController
         return wp_safe_redirect($this->data['_wp_http_referer'] . '#contact', 302);
     }
 }
+
+
