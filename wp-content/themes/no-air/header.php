@@ -14,7 +14,7 @@
 </head>
 <body>
 <header>
-    <h1><?= is_front_page() ? the_title() : wp_title('') ?></h1>
+    <h1 role="heading" aria-level="1"><?= is_front_page() ? the_title() : wp_title('') ?></h1>
     <!-- mettre des span pour qualifier la page. si page de contact alors Contactez-moi span natacha belboom -->
     <!-- a faire en php -->
     <a href="/">
@@ -26,7 +26,7 @@
         </svg>
     </a>
     <nav class="header__nav nav" role="navigation">
-        <h2 class="nav__title">
+        <h2 class="nav__title" role="heading" aria-level="2">
             <?= __('Navigation principale', 'noair') ?>
         </h2>
         <ul class="nav__container">

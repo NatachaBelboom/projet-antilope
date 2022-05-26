@@ -1,8 +1,6 @@
 <div class="bestSeller__container">
-    <figure>
-        <?= get_the_post_thumbnail(null, 'medium', ['class' => 'post__thumb']) ?>
-    </figure>
-    <h3 class="bestSeller__container--title"><?= the_title() ?></h3>
+    <?= wp_get_attachment_image(get_field('contact_logo'),'medium', false, array('class' => 'contactSection__img')); ?>
+    <h3 class="bestSeller__container--title" role="heading" aria-level="3"><?= the_title() ?></h3>
     <p class="bestSeller__container--meaning"><?= get_field('meaning') ?></p>
     <a href="<?= get_the_permalink(); ?>">
         En savoir plus <span class="sro">sur le module <?= the_title() ?></span>

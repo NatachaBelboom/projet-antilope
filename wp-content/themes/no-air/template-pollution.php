@@ -7,7 +7,7 @@
 <?php get_header(); ?>
 
     <main>
-        <h2><span>Quels sont </span>Les polluants mesurés</h2>
+        <h2 role="heading" aria-level="2"><span>Quels sont </span>Les polluants mesurés</h2>
         <div>
             <h3>Filtres</h3>
             <div>
@@ -47,7 +47,7 @@
 
         <section class="layout__products products">
             <div class="products__title">
-                <h2 class="title"><span class="light">Découvrez</span>Nos modules phares</h2>
+                <h2 class="title" role="heading" aria-level="2"><span class="light">Découvrez</span>Nos modules phares</h2>
                 <a href="<?= get_post_type_archive_link('product'); ?>">Les voir tous <img src=""
                                                                                            alt="icone de flèche pointant vers la droite"></a>
             </div>
@@ -65,7 +65,7 @@
         </section>
         <section class="layout__contactSection contactSection">
             <?= wp_get_attachment_image(get_field('contact_logo'),'medium', false, array('class' => 'contactSection__img')); ?>
-            <h2 class="contactSection__title ">Contactez-nous</h2>
+            <h2 class="contactSection__title" role="heading" aria-level="2">Contactez-nous</h2>
             <p>Nos produits vous <strong>plaisent</strong>? Envie d'avoir plus d'informations sur un <strong>module</strong>?</p>
             <a href="<?= get_permalink(noair_get_template_page('template-contact')); ?>">
                 Envoyez-nous un mail

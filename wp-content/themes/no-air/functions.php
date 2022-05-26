@@ -176,7 +176,7 @@ function noair_get_products($count = 20/*, $search = null*/)
     // 1. on instancie l'objet WP_QUERY
     $products = new WP_Query([
         'post_type' => 'product',
-        'orderby' => 'date',
+        'orderby' => 'ID',
         'order' => 'ASC',
         'posts_per_page' => $count,
 /*        's' => strlen($search) ? $search : null,*/

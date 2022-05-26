@@ -7,7 +7,7 @@
 
     <main class="layout">
         <section>
-            <h2><span>Qu'est-ce que </span>NOair</h2>
+            <h2 role="heading" aria-level="2"><span>Qu'est-ce que </span>NOair</h2>
             <div>
                 <?= wp_get_attachment_image(get_field('image1'),'large', false, array('class' => '')); ?>
                 <p>7 millions de victimes par an dans le monde !
@@ -21,7 +21,7 @@
         </section>
         <section>
             <div>
-                <h2><span>Découvrez </span>Nos modules</h2>
+                <h2 role="heading" aria-level="2"><span>Découvrez </span>Nos modules</h2>
                 <a href="<?= get_post_type_archive_link('product'); ?>">
                     Les voir tous <svg xmlns="http://www.w3.org/2000/svg" width="19.692" height="13.501" viewBox="0 0 19.692 13.501">
                         <title>Une flèche noire</title>
@@ -39,7 +39,7 @@
             </div>
         </section>
         <section class="layout__partners partners">
-            <h2 class="title"><span class="light">En collaboration avec</span>Nos partenaires</h2>
+            <h2 class="title" role="heading" aria-level="2"><span class="light">En collaboration avec</span>Nos partenaires</h2>
             <div class="partners__container">
                 <?php
                 $partner = new WP_Query([
@@ -58,7 +58,7 @@
         </section>
         <section class="layout__contactSection contactSection">
             <?= wp_get_attachment_image(get_field('contact_logo'),'medium', false, array('class' => 'contactSection__img')); ?>
-            <h2 class="contactSection__title ">Contactez-nous</h2>
+            <h2 class="contactSection__title" role="heading" aria-level="2">Contactez-nous</h2>
             <p>Nos produits vous <strong>plaisent</strong>? Envie d'avoir plus d'informations sur un <strong>module</strong>?</p>
             <a href="<?= get_permalink(noair_get_template_page('template-contact')); ?>">
                 Envoyez-nous un mail

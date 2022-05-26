@@ -20,7 +20,7 @@
     </div>
     <section class="layout__about about">
         <div>
-            <h2 class="title">
+            <h2 class="title" role="heading" aria-level="2">
                 <span class="light">Qu'est-ce que </span>Le projet NOair
             </h2>
             <p class="about__text"><?= get_field('about_text'); ?></p>
@@ -39,7 +39,7 @@
     </section>
     <section class="layout__products products">
         <div class="products__title">
-            <h2 class="title">
+            <h2 class="title" role="heading" aria-level="2">
                 <span class="light">Découvrez </span>Nos modules phares
             </h2>
             <a href="<?= get_post_type_archive_link('product'); ?>">
@@ -65,7 +65,7 @@
     </section>
     <section class="layout__pollution pollution">
         <div>
-            <h2 class="title">
+            <h2 class="title" role="heading" aria-level="2">
                 <span class="light">Quels sont </span>Les polluants mesurés
             </h2>
             <p class="pollution__text"><?= get_field('text-pollu'); ?></p>
@@ -83,7 +83,7 @@
         </div>
     </section>
     <section class="layout__partners partners">
-        <h2 class="title"><span class="light">En collaboration avec </span>Nos partenaires</h2>
+        <h2 class="title" role="heading" aria-level="2"><span class="light">En collaboration avec </span>Nos partenaires</h2>
         <div class="partners__container">
             <?php
             $partner = new WP_Query([
@@ -103,7 +103,7 @@
 
     <section class="layout__contactSection contactSection">
         <?= wp_get_attachment_image(get_field('contact_logo'),'medium', false, array('class' => 'contactSection__img')); ?>
-        <h2 class="contactSection__title ">Contactez-nous</h2>
+        <h2 class="contactSection__title" role="heading" aria-level="2">Contactez-nous</h2>
         <p>Nos produits vous <strong>plaisent</strong>? Envie d'avoir plus d'informations sur un <strong>module</strong>?</p>
         <a href="<?= get_permalink(noair_get_template_page('template-contact')); ?>">
             Envoyez-nous un mail

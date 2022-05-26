@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a178f54e-50f2-42b7-85b4-283217917e6d" name="Changes" comment="fix bugs &amp; contact form">
+    <list default="true" id="a178f54e-50f2-42b7-85b4-283217917e6d" name="Changes" comment="work in progress">
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/BaseFormController.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/BaseFormController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/ContactFormController.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/ContactFormController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/partner.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/partner.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/archive-product.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/archive-product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/functions.php" afterDir="false" />
@@ -15,7 +14,6 @@
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-about.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-about.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-contact.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-pollution.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-pollution.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-publications.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-publications.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +35,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../projet-test-wordpress" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../projet-portfolio" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -96,7 +94,8 @@
       <workItem from="1653071254407" duration="14000" />
       <workItem from="1653071286454" duration="1989000" />
       <workItem from="1653400823171" duration="7541000" />
-      <workItem from="1653471139136" duration="9342000" />
+      <workItem from="1653471139136" duration="13939000" />
+      <workItem from="1653557585266" duration="141000" />
     </task>
     <task id="LOCAL-00001" summary="add custom theme">
       <created>1652558054610</created>
@@ -126,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652949890931</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="work in progress">
+      <created>1653489680316</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1653489680317</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,8 +152,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add custom theme" />
-    <MESSAGE value="work in progress" />
     <MESSAGE value="fix bugs &amp; contact form" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bugs &amp; contact form" />
+    <MESSAGE value="work in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="work in progress" />
   </component>
 </project>

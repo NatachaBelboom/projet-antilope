@@ -8,20 +8,24 @@
 <?php get_header(); ?>
 <?php if(have_posts()): while(have_posts()): the_post(); ?>
     <main class="layout__contact contact">
-        <h2 class="contact__title title"><span>N'hésitez pas à </span>Nous contacter</h2>
+        <h2 class="contact__title title" role="heading" aria-level="2"><span>N'hésitez pas à </span>Nous contacter</h2>
         <div class="contact__infos">
-            <h3>Les informations</h3>
-            <div>
-                <h4>ISSeP</h4>
-                <p>Rue Chéra, 200 B-4000 LIEGE</p>
-                <p>+32 4 229 83 11</p>
-                <a href="">le site web</a>
+            <h3 role="heading" aria-level="3">Les informations</h3>
+            <div itemscope itemtype="https://schema.org/Organization">
+                <h4 role="heading" aria-level="4" itemprop="legalName">ISSeP</h4>
+                <div itemprop="location" itemscope itemtype="https://schema.org/PostalAddress">
+                    <p><span itemprop="streetAddress">Rue Chéra, 200 </span><span itemprop="postalCode">B-4000 </span><span itemprop="addressLocality">Liège</span></p>
+                    <p>+32 4 229 83 11</p>
+                    <a href="">le site web</a>
+                </div>
             </div>
-            <div>
-                <h4>HEPL</h4>
-                <p>Campus Gloesener Quai Gloesener 6, 4000 Liège</p>
-                <p>+32 (0)4 279 55 20</p>
-                <a href="">le site web</a>
+            <div itemscope itemtype="https://schema.org/Organization">
+                <h4 role="heading" aria-level="4" itemprop="legalName">HEPL</h4>
+                <div itemprop="location" itemscope itemtype="https://schema.org/PostalAddress">
+                    <p><span itemprop="streetAddress">Campus Gloesener Quai Gloesener 6,</span><span itemprop="postalCode">4000 </span><span itemprop="addressLocality">Liège</span></p>
+                    <p>+32 (0)4 279 55 20</p>
+                    <a href="">le site web</a>
+                </div>
             </div>
         </div>
 

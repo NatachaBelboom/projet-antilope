@@ -2,18 +2,18 @@
 
     <main class="layout">
         <section class="layout__single single">
-            <h2 class="single__title title"><span>Le module </span><?php the_title(); ?></h2>
-            <figure>
-                <?= get_the_post_thumbnail(null, 'medium', ['class' => 'post__thumb']) ?>
-            </figure>
+            <h2 class="single__title title" role="heading" aria-level="2"><span>Le module </span><?php the_title(); ?></h2>
+            <?= wp_get_attachment_image(get_field('contact_logo'),'medium', false, array('class' => 'contactSection__img')); ?>
             <a href="<?= get_post_type_archive_link('product'); ?>">Retour vers les modules</a>
             <div class="single__presentation">
-                <img src="" alt="image de l'interieur du module">
+                <figure>
+                    <?= get_the_post_thumbnail(null, 'medium', ['class' => 'single__thumb']) ?>
+                </figure>
                 <p><?= get_field('strong-title') ?></p>
                 <p><?= get_field('description'); ?></p>
             </div>
             <div class="single__caracteristic caracteristic">
-                <h3 class="caracteristic__title">Les caractéristiques</h3>
+                <h3 class="caracteristic__title" role="heading" aria-level="3">Les caractéristiques</h3>
                 <?php foreach (get_field('caracteristiques') as $key => $caracteristique): ?>
                     <?php if (!empty($caracteristique)): ?>
                         <div class="caracteristic__card">
@@ -24,7 +24,7 @@
                 <?php endforeach; ?>
             </div>
             <div class="single__pollution pollution">
-                <h3 class="pollution__title">Les polluants</h3>
+                <h3 class="pollution__title" role="heading" aria-level="3">Les polluants</h3>
                 <?php foreach (get_field('polluants') as $pollution): ?>
                     <?php if (!empty($pollution)): ?>
                     <div class="pollution__card">
@@ -35,7 +35,7 @@
             </div>
         </section>
         <section class="layout__partners partners">
-            <h2 class="title"><span class="light">En collaboration avec</span>Nos partenaires</h2>
+            <h2 class="title" role="heading" aria-level="2"><span class="light">En collaboration avec</span>Nos partenaires</h2>
             <div class="partners__container">
                 <?php
                 $partner = new WP_Query([
@@ -55,7 +55,7 @@
         </section>
         <section class="layout__contactSection contactSection">
             <?= wp_get_attachment_image(get_field('contact_logo'), 'medium', false, array('class' => 'contactSection__img')); ?>
-            <h2 class="contactSection__title ">Contactez-nous</h2>
+            <h2 class="contactSection__title" role="heading" aria-level="2">Contactez-nous</h2>
             <p>Nos produits vous <strong>plaisent</strong>? Envie d'avoir plus d'informations sur un
                 <strong>module</strong>?</p>
             <a href="<?= get_permalink(noair_get_template_page('template-contact')); ?>">

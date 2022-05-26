@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main>
     <section>
-        <h2><span>Découvrez </span>Nos modules</h2>
+        <h2 role="heading" aria-level="2"><span>Découvrez </span>Nos modules</h2>
         <?php
         $products = new WP_Query([
             'post_type' => 'product',
@@ -10,10 +10,8 @@
 
         if ($products->have_posts()) : while ($products->have_posts()) : $products->the_post(); ?>
             <div>
-                <figure>
-                    <?= get_the_post_thumbnail(null, 'medium', ['class' => 'post__thumb']) ?>
-                </figure>
-                <h3><?= the_title() ?></h3>
+                <?= wp_get_attachment_image(get_field('contact_logo'),'medium', false, array('class' => 'contactSection__img')); ?>
+                <h3 role="heading" aria-level="3"><?= the_title() ?></h3>
                 <p><?= get_field('meaning') ?></p>
                 <a href="<?= get_the_permalink(); ?>">En savoir plus <span class="sro">sur le module <?= the_title() ?></span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="19.692" height="13.501" viewBox="0 0 19.692 13.501">
@@ -33,7 +31,7 @@
 
     <section class="layout__pollution pollution">
         <div>
-            <h2 class="title">
+            <h2 class="title" role="heading" aria-level="2">
                 <span class="light">Quels sont </span>Les polluants mesurés
             </h2>
             <p class="pollution__text"></p>
@@ -52,7 +50,7 @@
     </section>
     <section class="layout__contactSection contactSection">
         <?= wp_get_attachment_image(get_field('contact_logo'),'medium', false, array('class' => 'contactSection__img')); ?>
-        <h2 class="contactSection__title ">Contactez-nous</h2>
+        <h2 class="contactSection__title" role="heading" aria-level="2">Contactez-nous</h2>
         <p>Nos produits vous <strong>plaisent</strong>? Envie d'avoir plus d'informations sur un <strong>module</strong>?</p>
         <a href="<?= get_permalink(noair_get_template_page('template-contact')); ?>">
             Envoyez-nous un mail
