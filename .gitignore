@@ -11,4 +11,4 @@ wp-content/*
 !wp-content/themes
 wp-content/themes/*
 !wp-content/themes/no-air
-wp-content/themes/dw/public
+wp-content/themes/no-air/public
