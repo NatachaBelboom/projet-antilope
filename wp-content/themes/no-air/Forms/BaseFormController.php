@@ -33,6 +33,7 @@ abstract class BaseFormController
             $sanitizer = new $sanitizer($this->data[$attribute] ?? null);
 
             $this->data[$attribute] = $sanitizer->getSanitizedValue();
+
         }
     }
 

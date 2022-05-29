@@ -13,7 +13,6 @@ class ContactFormController extends BaseFormController
             'firstname' => TextSanitizer::class,
             'lastname' => TextSanitizer::class,
             'email' => EmailSanitizer::class,
-            'phone' => TextSanitizer::class,
             'message' => TextSanitizer::class,
             'rules' => TextSanitizer::class,
         ];
@@ -22,6 +21,7 @@ class ContactFormController extends BaseFormController
     protected function getValidatableAttributes() : array
     {
         return [
+            'choice' => [RequiredValidator::class],
             'firstname' => [RequiredValidator::class],
             'lastname' => [RequiredValidator::class],
             'email' => [RequiredValidator::class, EmailValidator::class],
@@ -32,6 +32,7 @@ class ContactFormController extends BaseFormController
 
     protected function redirectWithErrors($errors)
     {
+
         // C'est pas OK, on place les erreurs de validation dans la session
         $_SESSION['feedback_contact_form'] = [
             'success' => false,

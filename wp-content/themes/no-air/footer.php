@@ -10,5 +10,6 @@
         </li>
     </ul>
 </footer>
+<script type="text/javascript" src="<?= noair_mix('js/script.js'); ?>"></script>
 </body>
 </html>

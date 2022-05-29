@@ -2,18 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a178f54e-50f2-42b7-85b4-283217917e6d" name="Changes" comment="work in progress">
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/fonts/poppins-black-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/fonts/poppins-bold-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/fonts/poppins-extrabold-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/fonts/poppins-extralight-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/fonts/poppins-light-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/fonts/poppins-medium-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/_fonts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/_reset.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/about.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/header.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/products.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/BaseFormController.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/BaseFormController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/ContactFormController.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/ContactFormController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/partner.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/partner.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/archive-product.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/archive-product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/single-product.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/single-product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-about.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-about.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-pollution.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-pollution.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +50,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../projet-portfolio" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\wp-content\themes\no-air\resources\fonts" />
       <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\sans-wordpress\img" />
       <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\wp-content\themes\no-air" />
     </key>
@@ -95,7 +111,10 @@
       <workItem from="1653071286454" duration="1989000" />
       <workItem from="1653400823171" duration="7541000" />
       <workItem from="1653471139136" duration="13939000" />
-      <workItem from="1653557585266" duration="141000" />
+      <workItem from="1653557585266" duration="11667000" />
+      <workItem from="1653739566624" duration="2311000" />
+      <workItem from="1653741939984" duration="16322000" />
+      <workItem from="1653818524904" duration="8579000" />
     </task>
     <task id="LOCAL-00001" summary="add custom theme">
       <created>1652558054610</created>
@@ -132,7 +151,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653489680317</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="npx installation">
+      <created>1653558207333</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1653558207333</updated>
+    </task>
+    <task id="LOCAL-00007" summary="work in progress">
+      <created>1653558231256</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1653558231256</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +186,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add custom theme" />
     <MESSAGE value="fix bugs &amp; contact form" />
+    <MESSAGE value="npx installation" />
     <MESSAGE value="work in progress" />
     <option name="LAST_COMMIT_MESSAGE" value="work in progress" />
   </component>

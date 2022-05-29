@@ -1,0 +1,89 @@
+@import "reset";
+@import "variables";
+@import "fonts";
+
+
+html{
+  font-size: 10px;
+}
+
+body, body * {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.sro {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+p, a{
+  font-size: 1.6rem;
+}
+
+.title{
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: $green;
+  margin-top: $spaceL;
+}
+.light{
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #000;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.link{
+  color: #000;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.arrow{
+  margin-left: 1.5rem;
+
+/*  &:hover path{
+    d: path("M20.784,11.51a.919.919,0,0,0-.007,1.294l4.275,4.282H9.333A.911.911,0,0,0,8.426,18c0,.506.907.914.907.914H25.045L20.77,23.2a.925.925,0,0,0,.007,1.294.91.91,0,0,0,1.287-.007l5.794-5.836h0a1.026,1.026,0,0,0,.19-.288.872.872,0,0,0,.07-.352.916.916,0,0,0-.26-.64l-5.794-5.836A.9.9,0,0,0,20.784,11.51Z");
+    d: "M20.784,11.51a.919.919,0,0,0-.007,1.294l4.275,4.282H9.333A.911.911,0,0,0,8.426,18c0,.506.907.914.907.914H25.045L20.77,23.2a.925.925,0,0,0,.007,1.294.91.91,0,0,0,1.287-.007l5.794-5.836h0a1.026,1.026,0,0,0,.19-.288.872.872,0,0,0,.07-.352.916.916,0,0,0-.26-.64l-5.794-5.836A.9.9,0,0,0,20.784,11.51Z";
+    transition: 1s linear;
+  }*/
+}
+
+
+.line{
+  border-bottom: 1.5px solid black;
+  width: 100%;
+  display: block;
+  flex: 1;
+  transform: translateY(-10px);
+}
+.titleHeader{
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.space{
+  margin-bottom: $spaceM;
+}
+
+strong{
+  font-weight: 700;
+}
+
+@import "index";
+@import "products";
+@import "header";
+@import "about";

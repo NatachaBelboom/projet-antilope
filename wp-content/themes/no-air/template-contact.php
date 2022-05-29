@@ -7,8 +7,8 @@
 
 <?php get_header(); ?>
 <?php if(have_posts()): while(have_posts()): the_post(); ?>
-    <main class="layout__contact contact">
-        <h2 class="contact__title title" role="heading" aria-level="2"><span>N'hésitez pas à </span>Nous contacter</h2>
+    <main class="layout layout__contact contact">
+        <h2 class="contact__title title" role="heading" aria-level="2"><span class="light">N'hésitez pas à </span>Nous contacter</h2>
         <div class="contact__infos">
             <h3 role="heading" aria-level="3">Les informations</h3>
             <div itemscope itemtype="https://schema.org/Organization">
@@ -83,8 +83,8 @@
             </form>
         <?php else : ?>
             <p class="form__feedback"><?= __('Merci de nous avoir contacté, à bientôt !', 'noair'); ?></p>
-            <?php unset($_SESSION['feedback_contact_form']); ?>
         <?php endif; ?>
+        <?php unset($_SESSION['feedback_contact_form']); ?>
 
     </main>
 <?php endwhile; endif; ?>
