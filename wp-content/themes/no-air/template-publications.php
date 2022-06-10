@@ -5,18 +5,44 @@
 ?>
 
 <?php get_header(); ?>
+<main class="pub">
+    <div class="container">
+        <section class="layout__publications publications">
+            <div class="titleHeader space">
+                <h2 class="title" role="heading" aria-level="2"><span class="light">NOair </span>dans la presse</h2>
+                <span class="line"></span>
+            </div>
+            <div class=publications__container>
+                <?php
+                $publications = new WP_Query([
+                    'post_type' => 'publication',
+                    'meta_key' => 'date',
+                    'orderby' => 'meta_value',
+                ]);
 
-    <section>
-        <?= wp_get_attachment_image(get_field('contact_logo'),'medium', false, array('class' => '')); ?>
-        <h2>Contactez-nous</h2>
-        <p>Nos produits vous plaisent? Envie d'avoir plus d'informations sur un module?</p>
-        <a href="<?= get_permalink(noair_get_template_page('template-contact')); ?>">
-            Envoyez-nous un mail
-            <svg xmlns="http://www.w3.org/2000/svg" width="19.692" height="13.501" viewBox="0 0 19.692 13.501">
-                <title>Une flèche noire</title>
-                <desc>Une flèche noire pointant vers la droite</desc>
-                <path id="Icon_ionic-ios-arrow-round-forward" data-name="Icon ionic-ios-arrow-round-forward" d="M20.784,11.51a.919.919,0,0,0-.007,1.294l4.275,4.282H9.333A.911.911,0,0,0,8.426,18c0,.506.907.914.907.914H25.045L20.77,23.2a.925.925,0,0,0,.007,1.294.91.91,0,0,0,1.287-.007l5.794-5.836h0a1.026,1.026,0,0,0,.19-.288.872.872,0,0,0,.07-.352.916.916,0,0,0-.26-.64l-5.794-5.836A.9.9,0,0,0,20.784,11.51Z" transform="translate(-8.426 -11.252)"/>
-            </svg>
-        </a>
-    </section>
+                if (($publications->have_posts())) : while ($publications->have_posts()) : $publications->the_post();
+                    noair_include('publication', ['modifier' => 'index']);
+                endwhile;
+                else: ?>
+                    <p class="publication__empty">Il n'y a pas encore de publications a présenter</p>
+                <?php endif; ?>
+                <?php wp_reset_postdata(); ?>
+
+            </div>
+        </section>
+        <section class="layout__contactSection contactSection">
+            <?= wp_get_attachment_image(get_field('contact_logo'),'medium', false, array('class' => 'contactSection__img')); ?>
+            <div>
+                <h2 class="contactSection__title" role="heading" aria-level="2">Contactez-nous</h2>
+                <p>Nos produits vous <strong>plaisent</strong>? Envie d'avoir plus d'informations sur un <strong>module</strong>?</p>
+                <a href="<?= get_permalink(noair_get_template_page('template-contact')); ?>" class="contactSection__link link">
+                    Envoyez-nous un mail
+                    <?php noair_include('arrow-next'); ?>
+                </a>
+            </div>
+        </section>
+    </div>
+</main>
+
+
 <?php get_footer(); ?>

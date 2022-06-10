@@ -1,0 +1,145 @@
+.contact{
+
+  &__infos{
+
+    & h4{
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: $spaceXS;
+      line-height: 3rem;
+    }
+
+    & > div{
+      margin-bottom: 5rem;
+    }
+  }
+}
+.infos__container{
+  line-height: 3rem;
+  display: flex;
+  justify-content: space-around;
+
+  & .address{
+    width: 140px;
+  }
+  & a{
+    text-decoration: none;
+    color: #000;
+  }
+}
+
+.form{
+  margin-bottom: 4rem;
+  &__field{
+    margin-bottom: 2rem;
+  }
+
+  &__label{
+    font-size: 1.6rem;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  & select option {
+    font-weight: 500;
+    padding-right: 4rem;
+    background-color: white;
+  }
+
+  &__input, & select{
+    border: none;
+    border-radius: 1.5rem;
+    background-color: $blue;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    width: 100%;
+    color: #000;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+
+    &::placeholder{
+      font-weight: 500;
+    }
+  }
+
+  &__checklabel{
+    font-size: 1.4rem;
+
+    & a{
+      font-size: 1.4rem;
+      color: #000;
+
+    }
+  }
+
+  &__button{
+    color: #fff;
+    border: none;
+    border-radius: 5rem;
+    background-color: #062132;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 1rem 3rem;
+    cursor: pointer;
+  }
+
+  &__error{
+    color: #BB0001;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+  }
+
+  &__errors{
+    color: #BB0001;
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    line-height: 3rem;
+  }
+
+  &__feedback{
+    text-align: center;
+    font-weight: 700;
+    color: darkgreen;
+    font-size: 2rem;
+    align-self: center;
+  }
+
+}
+
+.form__errors{
+  & ~ label{
+    color: #BB0001;
+  }
+}
+
+@media (min-width: 1000px){
+  .contact__container{
+
+    display: grid;
+    grid-auto-flow: dense;
+    grid-column-gap: 4rem;
+    justify-content: center;
+
+  }
+
+  .form{
+    grid-column: 1/2;
+  }
+  .contact__infos{
+    grid-column: 2/3;
+  }
+
+  .flexContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+
+  }
+
+  .form__field{
+    flex: 1;
+  }
+}

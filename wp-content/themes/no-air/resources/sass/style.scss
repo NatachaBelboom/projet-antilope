@@ -30,12 +30,14 @@ body{
 p, a{
   font-size: 1.6rem;
 }
-
+#no-margin{
+  margin: 0;
+}
 .title{
   font-size: 2.5rem;
   font-weight: 700;
   color: $green;
-  margin-top: $spaceL;
+  margin-top: 6rem;
 }
 .light{
   font-size: 1.6rem;
@@ -43,6 +45,7 @@ p, a{
   color: #000;
   display: block;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 .link{
@@ -53,12 +56,6 @@ p, a{
 }
 .arrow{
   margin-left: 1.5rem;
-
-/*  &:hover path{
-    d: path("M20.784,11.51a.919.919,0,0,0-.007,1.294l4.275,4.282H9.333A.911.911,0,0,0,8.426,18c0,.506.907.914.907.914H25.045L20.77,23.2a.925.925,0,0,0,.007,1.294.91.91,0,0,0,1.287-.007l5.794-5.836h0a1.026,1.026,0,0,0,.19-.288.872.872,0,0,0,.07-.352.916.916,0,0,0-.26-.64l-5.794-5.836A.9.9,0,0,0,20.784,11.51Z");
-    d: "M20.784,11.51a.919.919,0,0,0-.007,1.294l4.275,4.282H9.333A.911.911,0,0,0,8.426,18c0,.506.907.914.907.914H25.045L20.77,23.2a.925.925,0,0,0,.007,1.294.91.91,0,0,0,1.287-.007l5.794-5.836h0a1.026,1.026,0,0,0,.19-.288.872.872,0,0,0,.07-.352.916.916,0,0,0-.26-.64l-5.794-5.836A.9.9,0,0,0,20.784,11.51Z";
-    transition: 1s linear;
-  }*/
 }
 
 
@@ -74,6 +71,7 @@ p, a{
   gap: 1.5rem;
   align-items: flex-end;
   flex-wrap: wrap;
+  margin-top: 6rem;
 }
 .space{
   margin-bottom: $spaceM;
@@ -87,3 +85,7 @@ strong{
 @import "products";
 @import "header";
 @import "about";
+@import "footer";
+@import "contact";
+@import "pollution";
+@import "publications";

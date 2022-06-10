@@ -13,6 +13,7 @@ class ContactFormController extends BaseFormController
             'firstname' => TextSanitizer::class,
             'lastname' => TextSanitizer::class,
             'email' => EmailSanitizer::class,
+            'choice' => TextSanitizer::class,
             'message' => TextSanitizer::class,
             'rules' => TextSanitizer::class,
         ];
@@ -55,11 +56,30 @@ class ContactFormController extends BaseFormController
         ]);
 
         // Générer un email contenant l'URL vers le post en question
-        $feedback = 'Bonjour, Vous avez un nouveau message.<br />';
-        $feedback .= 'Y accéder : ' . get_edit_post_link($id);
+        $feedback = 'Bonjour, Vous avez un nouveau message.';
+        $feedback .= $id['post_content'];
+
+        switch ($_POST['choice']){
+            case 'productMoreInfo':
+                $subject = 'avoir plus d\'infos sur un module';
+                $email = 'natacha.belboom@hotmail.com';
+                break;
+            case 'sectionMoreInfo':
+                $subject = 'avoir plus d\'infos sur la section électronique et systèmes embarqués';
+                $email = 'natacha.belboom@student.hepl.com';
+                break;
+            case 'orderProduct':
+                $subject = 'commander un module';
+                $email = 'natacha.belboom@hotmail.com';
+                break;
+            case 'other':
+                $subject = 'renseignement';
+                $email = 'natacha.belboom@hotmail.com';
+                break;
+        }
 
         // Envoyer l'email à l'admin
-        wp_mail(get_bloginfo('admin_email'), 'Nouveau message !', $feedback);
+        wp_mail($email, 'Nouveau message. Souhait : '.$subject, $feedback);
     }
 
     protected function redirectWithSuccess()

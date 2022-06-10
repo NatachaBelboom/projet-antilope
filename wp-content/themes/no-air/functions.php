@@ -73,6 +73,20 @@ register_post_type('partner', [
     'has_archive' => true,
 ]);
 
+register_post_type('publication', [
+    'label' => 'Publications',
+    'labels' => [ //Ecraser des valeurs par defaut
+        'name' => 'Publications',
+        'singular_name' => 'Publications',
+    ],
+    'description' => "La ressource permettant de gérer les publications",
+    'public' => true, //accessible dans l'interface admin (formulaire de contact: false)
+    'menu_position' => 5,
+    'menu_icon' => 'dashicons-universal-access',
+    'supports' => ['title', 'editor', 'thumbnail'],
+    'rewrite' => ['slug' => 'publications'],
+]);
+
 register_post_type('message', [
     'label' => 'Messages de contact',
     'labels' => [ //Ecraser des valeurs par defaut
@@ -89,6 +103,8 @@ register_post_type('message', [
     ],
     'map_meta_cap' => true,
 ]);
+
+
 
 
 // enregistrer le traitement du formulaire de contact personnalisé

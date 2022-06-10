@@ -5,6 +5,12 @@
     display: flex;
     flex-direction: column;
 
+    & p{
+      line-height: 3rem;
+      margin-bottom: $spaceS;
+      margin-top: $spaceM;
+    }
+
     & figure{
       display: flex;
       justify-content: center;
