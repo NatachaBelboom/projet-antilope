@@ -82,7 +82,7 @@ register_post_type('publication', [
     'description' => "La ressource permettant de gérer les publications",
     'public' => true, //accessible dans l'interface admin (formulaire de contact: false)
     'menu_position' => 5,
-    'menu_icon' => 'dashicons-universal-access',
+    'menu_icon' => 'dashicons-book',
     'supports' => ['title', 'editor', 'thumbnail'],
     'rewrite' => ['slug' => 'publications'],
 ]);
@@ -193,10 +193,9 @@ function noair_get_products($count = 20/*, $search = null*/)
     // 1. on instancie l'objet WP_QUERY
     $products = new WP_Query([
         'post_type' => 'product',
-        'orderby' => 'ID',
         'order' => 'ASC',
+        'orderby' => 'ID',
         'posts_per_page' => $count,
-/*        's' => strlen($search) ? $search : null,*/
     ]);
 
     // 2. on retourne l'objet WP_QUERY
@@ -210,7 +209,7 @@ function noair_include(string $partial, array $variables = [])
     // =>/Utilisateurs/.../wp-content/dw/partials/post.php
 
     extract($variables);
-    include(__DIR__ . '/partials/' . $partial . '.php');
+    include(__DIR__ . '/Partials/' . $partial . '.php');
 }
 
 function noair_get_template_page(string $template)

@@ -55,9 +55,14 @@ class ContactFormController extends BaseFormController
             'post_status' => 'publish'
         ]);
 
-        // Générer un email contenant l'URL vers le post en question
-        $feedback = 'Bonjour, Vous avez un nouveau message.';
-        $feedback .= $id['post_content'];
+
+        $choice   = '';
+        $email     = '';
+        $sender    = $this->data[ 'email' ];
+        $firstname = $this->data[ 'firstname' ];
+        $lastname  = $this->data[ 'lastname' ];
+        $message = $this->data['message'];
+
 
         switch ($_POST['choice']){
             case 'productMoreInfo':
@@ -78,8 +83,14 @@ class ContactFormController extends BaseFormController
                 break;
         }
 
+        $content = 'Bonjour, un nouveau message de contact a été envoyé.';
+        $content .= 'de ' . ucfirst( $firstname ) . ' ' . strtoupper( $lastname );
+        $content .= 'A propos de ' . $choice ;
+        $content .= 'email : ' . $sender;
+        $content .= 'Message : ' . $message;
+
         // Envoyer l'email à l'admin
-        wp_mail($email, 'Nouveau message. Souhait : '.$subject, $feedback);
+        wp_mail($email, 'Nouveau message. Souhait : '.$subject, $content);
     }
 
     protected function redirectWithSuccess()

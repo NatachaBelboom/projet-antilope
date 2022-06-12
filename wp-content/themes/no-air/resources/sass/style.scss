@@ -56,6 +56,12 @@ p, a{
 }
 .arrow{
   margin-left: 1.5rem;
+  transition: .2s ease-in;
+
+  &:hover, &:active, &:focus{
+    margin-left: 2rem;
+    transition: .2s ease-in;
+  }
 }
 
 

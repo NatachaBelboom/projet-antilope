@@ -73,7 +73,7 @@
   }
 }
 .burgerMenu span:nth-child(1) {
-  top: 0px;
+  top: 0;
   transform-origin: left center;
 }
 
@@ -94,7 +94,7 @@
 }
 
 .burgerMenu.open span:nth-child(2) {
-  width: 0%;
+  width: 0;
   opacity: 0;
 }
 

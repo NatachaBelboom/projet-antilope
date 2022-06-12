@@ -8,7 +8,7 @@
 
     <main class="layout">
         <div class="container">
-            <section class="layout__pollution pollution">
+            <section class="layout__pollution pollution slide-in">
                 <div class="titleHeader space">
                     <h2 class="title" role="heading" aria-level="2"><span class="light">Quels sont </span>Les polluants
                         mesurés</h2>
@@ -29,7 +29,7 @@
                                 <h3 role="heading" aria-level="3" class="polluant-event <?= !$firstElement ? 'selected' : '' ?>"><?= the_title(); ?></h3>
 
                                 <div class="polluant__card polluant-listener <?= !$firstElement ? 'selected' : '' ?>">
-                                    <p><?= get_field('description'); ?></p>
+                                    <?= get_field('description'); ?>
                                     <div>
                                         <p class="product-measure">Les modules mesurant le <?= the_title(); ?></p>
                                         <?php if ($modules): ?>
@@ -50,8 +50,7 @@
                     </div>
                 </div>
             </section>
-
-            <section class="layout__products">
+            <section class="layout__products slide-in">
                 <div class="layout__products--title">
                     <div class="titleHeader">
                         <h2 class="title" role="heading" aria-level="2">
@@ -76,7 +75,7 @@
                     </div>
                 </div>
             </section>
-            <section class="layout__contactSection contactSection">
+            <section class="layout__contactSection contactSection slide-in">
                 <?= wp_get_attachment_image(get_field('contact_logo'), 'medium', false, array('class' => 'contactSection__img')); ?>
                 <div>
                     <h2 class="contactSection__title" role="heading" aria-level="2">Contactez-nous</h2>

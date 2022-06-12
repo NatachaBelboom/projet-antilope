@@ -7,7 +7,7 @@
 <?php get_header(); ?>
 <main class="pub">
     <div class="container">
-        <section class="layout__publications publications">
+        <section class="layout__publications publications slide-in">
             <div class="titleHeader space">
                 <h2 class="title" role="heading" aria-level="2"><span class="light">NOair </span>dans la presse</h2>
                 <span class="line"></span>
@@ -30,7 +30,7 @@
 
             </div>
         </section>
-        <section class="layout__contactSection contactSection">
+        <section class="layout__contactSection contactSection slide-in">
             <?= wp_get_attachment_image(get_field('contact_logo'),'medium', false, array('class' => 'contactSection__img')); ?>
             <div>
                 <h2 class="contactSection__title" role="heading" aria-level="2">Contactez-nous</h2>

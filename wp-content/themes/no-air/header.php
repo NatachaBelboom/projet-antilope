@@ -13,7 +13,7 @@
     <title><?= is_front_page() ? 'NOair, mesure la qualité de l\'air' : wp_title('NOair |') ?></title>
 </head>
 <body>
-<header class="">
+<header>
     <div class="container header">
         <h1 role="heading" aria-level="1" class="sro"><?= is_front_page() ? the_title() : wp_title('') ?></h1>
         <a href="/" class="header__logo">

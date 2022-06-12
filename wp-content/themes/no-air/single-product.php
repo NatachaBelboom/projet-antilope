@@ -2,7 +2,7 @@
 
     <main class="layout">
         <div class="container">
-            <section class="layout__single single">
+            <section class="layout__single single slide-in">
                 <div class="titleHeader space">
                     <h2 class="title" role="heading" aria-level="2"><span class="light">Le module </span><?php the_title(); ?></h2>
                     <span class="line"></span>
@@ -49,7 +49,7 @@
                     <a href="<?= get_permalink(noair_get_template_page('template-pollution')); ?>" class="link single__link">Plus d'infos sur les polluants</a>
                 </div>
             </section>
-            <section class="layout__partners partners">
+            <section class="layout__partners partners slide-in">
                 <div class="titleHeader">
                     <h2 class="title" role="heading" aria-level="2"><span class="light">En collaboration avec </span>Nos partenaires</h2>
                     <span class="line"></span>
@@ -69,7 +69,7 @@
                     <?php wp_reset_postdata(); ?>
                 </div>
             </section>
-            <section class="layout__contactSection contactSection">
+            <section class="layout__contactSection contactSection slide-in">
                 <?= wp_get_attachment_image(get_field('contact_logo'),'medium', false, array('class' => 'contactSection__img')); ?>
                 <div>
                     <h2 class="contactSection__title" role="heading" aria-level="2">Contactez-nous</h2>

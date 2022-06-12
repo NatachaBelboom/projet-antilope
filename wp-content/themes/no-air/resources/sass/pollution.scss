@@ -1,3 +1,5 @@
+
+
 .pollution {
   margin: 0 3.2rem;
 
@@ -55,7 +57,7 @@
       line-height: 3rem;
       font-size: 1.6rem;
       margin-bottom: 3rem;
-      padding-right: 2.4rem;
+      text-align: justify;
     }
   }
 
@@ -92,6 +94,37 @@
   font-size: 1.8rem;
   font-weight: 700;
   text-align: center;
+}
+
+@media (max-width: 500px) {
+  .pollution {
+    &__polluants {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      justify-content: center;
+      align-items: flex-start;
+      transition: 0.5s ease-in;
+      align-content: flex-start;
+    }
+
+    &__container{
+      padding: 2.4rem 2.4rem 7rem;
+    }
+  }
+  .polluant__card {
+    position: absolute;
+    width: 100%;
+    padding: 2rem;
+    top: 10rem;
+    left:0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    z-index: 10;
+    visibility: hidden;
+  }
 }
 
 

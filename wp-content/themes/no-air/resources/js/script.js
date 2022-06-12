@@ -2,13 +2,14 @@ const burgerBtn = document.querySelector('.burgerMenu');
 const menu = document.querySelector('.nav__container');
 
 let menuOpen = false;
+if(burgerBtn){
+    burgerBtn.addEventListener('click', () => {
+        burgerBtn.classList.toggle('open');
+        menu.classList.toggle('menu__responsive');
+        document.body.classList.toggle('overflow-hidden');
 
-burgerBtn.addEventListener('click', () => {
-    burgerBtn.classList.toggle('open');
-    menu.classList.toggle('menu__responsive');
-    document.body.classList.toggle('overflow-hidden');
-
-});
+    });
+}
 
 const polluants = {
     modulesBtn: null,
@@ -44,10 +45,40 @@ const polluants = {
         this.container.style.height = this.getHeightWithPaddingOfAnElement(this.defaultBtn) + this.getHeightWithPaddingOfAnElement(this.defaultBtn.nextElementSibling) + 'px';
     },
 
-
     getHeightWithPaddingOfAnElement(element) {
         return element.getBoundingClientRect().bottom - element.getBoundingClientRect().top;
     },
-};
 
-polluants.init();
+
+};
+if(document.querySelector('#polluants')){
+    polluants.init();
+}
+
+const animations = {
+    sections: document.querySelectorAll('.slide-in'),
+
+    init()
+    {
+        this.obServeSection();
+    },
+    obServeSection() {
+        const observer = new IntersectionObserver(this.animateSection);
+        for (const section of this.sections) {
+            observer.observe(section);
+        }
+    },
+    animateSection(entries, observer) {
+        for (const entry of entries) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active-section');
+            } else {
+                entry.target.classList.remove('active-section');
+            }
+        }
+    },
+}
+if(document.querySelectorAll('.slide-in')){
+    animations.init();
+}
+

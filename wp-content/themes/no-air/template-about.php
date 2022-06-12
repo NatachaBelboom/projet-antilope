@@ -6,7 +6,7 @@
 <?php get_header(); ?>
     <main class="layout">
         <div class="container">
-            <section class="layout__about about">
+            <section class="layout__about about slide-in">
                 <div class="titleHeader space">
                     <h2 class="title" role="heading" aria-level="2"><span class="light">Qu'est-ce que </span>le projet NOair
                     </h2>
@@ -25,7 +25,7 @@
                     </figure>
                 </div>
             </section>
-            <section class="layout__products">
+            <section class="layout__products slide-in">
                 <div class="layout__products--title">
                     <div class="titleHeader">
                         <h2 class="title" role="heading" aria-level="2">
@@ -52,7 +52,7 @@
                     </div>
                 </div>
             </section>
-            <section class="layout__partners partners">
+            <section class="layout__partners partners slide-in">
                 <div class="titleHeader">
                     <h2 class="title" role="heading" aria-level="2"><span class="light">En collaboration avec </span>Nos
                         partenaires</h2>
@@ -75,7 +75,7 @@
                     wp_reset_postdata(); ?>
                 </div>
             </section>
-            <section class="layout__contactSection contactSection">
+            <section class="layout__contactSection contactSection slide-in">
                 <?= wp_get_attachment_image(get_field('contact_logo'),'medium', false, array('class' => 'contactSection__img')); ?>
                 <div>
                     <h2 class="contactSection__title" role="heading" aria-level="2">Contactez-nous</h2>

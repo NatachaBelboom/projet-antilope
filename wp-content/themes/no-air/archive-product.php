@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main class="layout">
     <div class="container">
-        <section class="layout__products">
+        <section class="layout__products slide-in">
             <div class="titleHeader space">
                 <h2 class="title" role="heading" aria-level="2"><span class="light">Découvrez </span>Nos modules</h2>
                 <span class="line"></span>
@@ -30,22 +30,7 @@
             <?php wp_reset_postdata(); ?>
             </div>
         </section>
-        <section class="layout__pollutionSection pollutionSection">
-            <div>
-                <h2 class="title" role="heading" aria-level="2">
-                    <span class="light">Quels sont </span>Les polluants mesurés
-                </h2>
-                <p class="pollutionSection__text"><?= get_field('text-pollu'); ?></p>
-                <a href="<?= get_permalink(noair_get_template_page('template-pollution')); ?>" class="pollution__link link">
-                    En savoir plus <span class="sro">sur les polluants</span>
-                    <?php noair_include('arrow-next'); ?>
-                </a>
-            </div>
-            <div>
-                <?= wp_get_attachment_image(get_field('pollution_img'),'large', false, array('class' => 'pollutionSection__img')); ?>
-            </div>
-        </section>
-        <section class="layout__contactSection contactSection">
+        <section class="layout__contactSection contactSection slide-in">
             <?= wp_get_attachment_image(get_field('contact_logo'),'medium', false, array('class' => 'contactSection__img')); ?>
             <div>
                 <h2 class="contactSection__title" role="heading" aria-level="2">Contactez-nous</h2>
