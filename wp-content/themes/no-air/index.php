@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <main class="layout">
     <div class="container">
         <section>
@@ -88,7 +87,7 @@
                 <?php
                 $partner = new WP_Query([
                     'post_type' => 'partner',
-                    'order' => 'ASC',
+                    'order' => 'DESC',
                 ]);
 
                 if (($partner->have_posts())) : while ($partner->have_posts()) : $partner->the_post();

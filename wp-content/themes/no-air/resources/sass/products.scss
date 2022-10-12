@@ -1,25 +1,23 @@
 .products{
-  &__title{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-}
-
-.products{
   margin-top: 16rem;
   margin-bottom: $spaceL;
   display: grid;
   grid-row-gap: 12.5rem;
   grid-column-gap: 2.4rem;
 
+  &__title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
   &__img{
     position: absolute;
     top: -9rem;
     left: 50%;
     transform: translate(-50%, -10px);
-    transition: 1s ease;
+    transition: .5s ease;
   }
   &__container{
     background-color: $blue;
@@ -42,6 +40,16 @@
 
   &__link{
     padding-bottom: 2px;
+  }
+}
+
+.product{
+  &__link{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }
 
@@ -172,12 +180,12 @@
 @media (min-width: 1200px){
   .hidden{
     overflow: hidden;
-    transition: 1s ease;
+    transition: .5s ease;
     max-height: 0;
   }
 
   .products__container {
-    transition: 1s ease;
+    transition: .5s ease;
     margin-bottom: 15rem;
 
     &:hover, &:focus {
@@ -185,7 +193,7 @@
 
       & .products__img{
         transform: translate(-50%, 0);
-        transition: 1s ease;
+        transition: .5s ease;
       }
 
       & .hidden{

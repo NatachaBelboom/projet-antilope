@@ -20,6 +20,33 @@
   }
 }
 
+.facebook__container{
+  position: relative;
+
+  &:hover{
+    & .hover1{
+      position: absolute;
+      top: -80px;
+    }
+
+    & .hover2{
+      position: absolute;
+      top: -40px;
+    }
+  }
+
+  & li.hover1, & li.hover2{
+    position: absolute;
+
+  }
+
+  & .on-hover{
+    z-index: 1;
+  }
+
+
+}
+
 @media (min-width: 900px){
   .footer{
     margin: 4rem 10.4rem;

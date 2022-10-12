@@ -1,0 +1,17 @@
+.mentions{
+  & p{
+    line-height: 25px;
+    margin-bottom: 1.5rem;
+  }
+
+  & ul{
+    margin: 0 0 0 3rem;
+  }
+
+  & li{
+    list-style: circle;
+    font-size: 1.6rem;
+    line-height: 25px;
+    margin-bottom: 1.5rem;
+  }
+}

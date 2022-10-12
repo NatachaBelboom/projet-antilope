@@ -8,7 +8,7 @@
   transform: translateY(-20px) scale(1);
 }
 
-.layout__presentation, .layout__products, .layout__pollutionSection, .layout__partners, .layout__contact, .layout__single, .layout__about, .layout__publications{
+.layout__presentation, .layout__products, .layout__pollutionSection, .layout__partners, .layout__contact, .layout__single, .layout__about, .layout__publications, .layout__mentions{
   margin: 0 3.2rem;
 }
 
@@ -182,7 +182,7 @@
 
 
 @media (min-width:600px) {
-  .layout__presentation, .layout__products, .layout__pollutionSection, .layout__partners, .layout__contact, .layout__single, .layout__publications{
+  .layout__presentation, .layout__products, .layout__pollutionSection, .layout__partners, .layout__contact, .layout__single, .layout__publications, .layout__mentions{
     margin: 0 5rem;
   }
   .layout__contactSection{
@@ -203,12 +203,24 @@
     z-index: 2;
   }
 }
+@media (min-width:700px){
+  .partners{
+    margin-bottom: 14rem;
+
+    &__container{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 3.2rem;
+    }
+  }
+}
+
 
 @media (min-width:900px) {
   .layout{
     margin: 0 auto;
 
-    &__products, &__partners, &__contact, &__about, &__single, &__publications{
+    &__products, &__partners, &__contact, &__about, &__single, &__publications, &__mentions{
       margin: 0 10.4rem;
     }
 
@@ -262,7 +274,7 @@
 
     &__container{
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       grid-column-gap: 3.2rem;
     }
 
@@ -271,10 +283,6 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
-    }
-
-    &__link{
-      /*display: ;*/
     }
   }
 
@@ -286,9 +294,6 @@
     align-items: center;
     gap: 150px;
 
-    /*& div{
-      flex: 1;
-    }*/
     &__img{
       position: static;
       height: 250px;
