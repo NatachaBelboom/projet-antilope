@@ -1,79 +1,120 @@
-.footer{
+.footer {
   margin: 2rem 3.2rem;
   display: flex;
   align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
   justify-content: space-between;
 
-  &__copyright, &__mentions{
+  &__copyright, &__mentions {
     font-size: 1.2rem;
     color: #000;
 
   }
 
-  & ul{
+  &__nav-social {
     display: flex;
     gap: 1.5rem;
   }
 
-  & a{
+  & a {
     cursor: pointer;
   }
 }
 
-.facebook__container{
+.facebook-btn {
   position: relative;
-
-  &:hover{
-    & .hover1{
-      position: absolute;
-      top: -80px;
-    }
-
-    & .hover2{
-      position: absolute;
-      top: -40px;
-    }
-  }
-
-  & li.hover1, & li.hover2{
-    position: absolute;
-
-  }
-
-  & .on-hover{
-    z-index: 1;
-  }
-
-
+  cursor: pointer;
 }
 
-@media (min-width: 900px){
-  .footer{
+.facebook-container {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 1.5rem);
+  right: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  z-index: 11;
+
+  &.show {
+    display: flex;
+  }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+
+  &.show {
+    display: block;
+  }
+}
+
+.facebook-links {
+
+  & svg {
+    min-width: 20px;
+  }
+
+  & a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  & span {
+    font-size: 13px;
+    color: black;
+    line-height: 17px;
+  }
+}
+
+@media (max-width: 492px){
+  .footer__copyright{
+    order: 3;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .footer {
     margin: 4rem 10.4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    &__copyright, &__mentions{
+    &__copyright, &__mentions {
       font-size: 1.6rem;
     }
-
-    & ul{
-      display: flex;
-      gap: 1.5rem;
-
-    }
   }
-  .logo{
+
+  .facebook-container{
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .logo {
     width: 80px;
     height: auto;
   }
 
-  .facebook{
+  .facebook {
     width: 15px;
     height: auto;
   }
-  .insta{
+  .insta {
     width: 30px;
     height: auto;
   }

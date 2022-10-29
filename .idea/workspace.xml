@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a178f54e-50f2-42b7-85b4-283217917e6d" name="Changes" comment="last changes">
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/science.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/mentions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-mentions.php" afterDir="false" />
+    <list default="true" id="a178f54e-50f2-42b7-85b4-283217917e6d" name="Changes" comment="logo changed, mentions">
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/Validators/CheckboxValidator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/estimation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-estimation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/archive-product.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/archive-product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/partner.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/partner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/science.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/science.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/contact.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/contact.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/footer.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/products.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/products.scss" afterDir="false" />
@@ -23,7 +24,8 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
@@ -145,6 +147,16 @@
       <workItem from="1665500681289" duration="5406000" />
       <workItem from="1665557570751" duration="9000" />
       <workItem from="1665574659918" duration="2574000" />
+      <workItem from="1665577815376" duration="8544000" />
+      <workItem from="1665774302898" duration="4826000" />
+      <workItem from="1665864042766" duration="3351000" />
+      <workItem from="1665999086989" duration="2101000" />
+      <workItem from="1666466454038" duration="45000" />
+      <workItem from="1666466550474" duration="136000" />
+      <workItem from="1666538015884" duration="9761000" />
+      <workItem from="1666622814932" duration="4638000" />
+      <workItem from="1666700716319" duration="2585000" />
+      <workItem from="1666793962413" duration="5031000" />
     </task>
     <task id="LOCAL-00001" summary="add custom theme">
       <created>1652558054610</created>
@@ -216,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655068130702</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="logo changed, mentions">
+      <created>1665577843625</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1665577843625</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +261,7 @@
     <MESSAGE value="fix some form bugs &amp; work in progress" />
     <MESSAGE value="progress" />
     <MESSAGE value="last changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="last changes" />
+    <MESSAGE value="logo changed, mentions" />
+    <option name="LAST_COMMIT_MESSAGE" value="logo changed, mentions" />
   </component>
 </project>

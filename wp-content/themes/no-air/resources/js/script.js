@@ -82,3 +82,44 @@ if(document.querySelectorAll('.slide-in')){
     animations.init();
 }
 
+const facebookLinks = {
+    button: null,
+    linksContainer: null,
+    overlay: null,
+    class: 'show',
+
+    init: function () {
+        this.button = document.querySelector('.facebook-btn');
+        this.linksContainer = document.querySelector('.facebook-container');
+        this.overlay = document.querySelector('.overlay');
+
+        this.event();
+    },
+
+    event: function () {
+        const self = this;
+
+        self.button.addEventListener('click', function () {
+            self.linksContainer.classList.toggle(self.class);
+            self.showOverlay();
+        });
+
+        self.overlay.addEventListener('click', function () {
+            self.linksContainer.classList.remove(self.class);
+            self.hideOverlay();
+        });
+    },
+
+    showOverlay: function () {
+        this.overlay.classList.add(this.class);
+    },
+
+    hideOverlay: function () {
+        this.overlay.classList.remove(this.class);
+    }
+};
+
+window.addEventListener('DOMContentLoaded', function () {
+    facebookLinks.init();
+})
+

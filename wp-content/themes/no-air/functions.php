@@ -3,6 +3,7 @@
 require_once(__DIR__ . '/Menus/MenuItem.php');
 require_once(__DIR__ . '/Forms/BaseFormController.php');
 require_once(__DIR__ . '/Forms/ContactFormController.php');
+require_once(__DIR__ . '/Forms/EstimationFormController.php');
 require_once(__DIR__ . '/Forms/Sanitizers/BaseSanitizer.php');
 require_once(__DIR__ . '/Forms/Sanitizers/TextSanitizer.php');
 require_once(__DIR__ . '/Forms/Sanitizers/EmailSanitizer.php');
@@ -10,6 +11,9 @@ require_once(__DIR__ . '/Forms/Validators/BaseValidator.php');
 require_once(__DIR__ . '/Forms/Validators/RequiredValidator.php');
 require_once(__DIR__ . '/Forms/Validators/EmailValidator.php');
 require_once(__DIR__ . '/Forms/Validators/AcceptedValidator.php');
+require_once(__DIR__ . '/Forms/Validators/RequiredValidator.php');
+require_once(__DIR__ . '/Api/GoogleApi.php');
+require_once(__DIR__ . '/Helper/DistanceHelper.php');
 
 add_action('init', 'dw_init_php_session', 1);
 
@@ -104,8 +108,22 @@ register_post_type('message', [
     'map_meta_cap' => true,
 ]);
 
-
-
+register_post_type('estimations', [
+    'label' => 'Estimations',
+    'labels' => [ //Ecraser des valeurs par defaut
+        'name' => 'Estimations',
+        'singular_name' => 'Estimations',
+    ],
+    'description' => "Les messages envoyés par les utilisateurs via le formulaire d\'estimations",
+    'public' => false, //accessible dans l'interface admin (formulaire de contact: false)
+    'show_ui' => true,
+    'menu_position' => 10,
+    'menu_icon' => 'dashicons-buddicons-pm',
+    'capabilities' => [
+        'create_posts' => false, //enlever le bouton add new
+    ],
+    'map_meta_cap' => true,
+]);
 
 // enregistrer le traitement du formulaire de contact personnalisé
 add_action('admin_post_nopriv_submit_contact_form', 'noair_handle_submit_contact_form');
@@ -116,28 +134,36 @@ function noair_handle_submit_contact_form()
     $form = new ContactFormController($_POST);
 }
 
-function noair_get_contact_field_value($field){
+// enregistrer le traitement du formulaire de l'estimation de cout
+add_action('admin_post_nopriv_submit_estimation_form', 'noair_handle_submit_estimation_form');
+add_action('admin_post_submit_estimation_form', 'noair_handle_submit_estimation_form');
 
-    if(!isset($_SESSION['feedback_contact_form'])) {
-        return '';
-    }
-
-    return $_SESSION['feedback_contact_form']['data'][$field] ?? '';
-}
-
-function noair_get_contact_field_error($field)
+function noair_handle_submit_estimation_form()
 {
-    if(! isset($_SESSION['feedback_contact_form'])) {
-        return '';
-    }
-
-    if(! ($_SESSION['feedback_contact_form']['errors'][$field] ?? null)) {
-        return '';
-    }
-
-    return '<p class="form__error">' . $_SESSION['feedback_contact_form']['errors'][$field] . '</p>';
+    $form = new EstimationFormController($_POST);
 }
 
+function noair_get_form_field_value($field, $form){
+
+    if(!isset($_SESSION[$form])) {
+        return '';
+    }
+
+    return $_SESSION[$form]['data'][$field] ?? '';
+}
+
+function noair_get_form_field_error($field, $form)
+{
+    if(! isset($_SESSION[$form])) {
+        return '';
+    }
+
+    if(! ($_SESSION[$form]['errors'][$field] ?? null)) {
+        return '';
+    }
+
+    return '<p class="form__error">' . $_SESSION[$form]['errors'][$field] . '</p>';
+}
 
 
 //Enregistrer les menus de navigation

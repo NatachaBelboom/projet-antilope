@@ -1,9 +1,5 @@
 <div class="">
     <div class="">
-        <div>
-            <p class="date"><?= get_field('date') ?></p>
-            <p><?= get_field('name_journal') ?></p>
-        </div>
         <a href="<?= get_field('pdf') ?>" target="_blank" class="">
             <?= the_title(); ?>
             <svg id="vuesax_outline_export" data-name="vuesax/outline/export" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
@@ -17,5 +13,11 @@
                 </g>
             </svg>
         </a>
+        <p><?= get_field('abstract'); ?></p>
+        <div>
+            <p class="date"><?= get_field('date') ?></p>
+
+        </div>
+
     </div>
 </div>
