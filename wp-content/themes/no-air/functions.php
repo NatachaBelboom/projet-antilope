@@ -11,11 +11,13 @@ require_once(__DIR__ . '/Forms/Validators/BaseValidator.php');
 require_once(__DIR__ . '/Forms/Validators/RequiredValidator.php');
 require_once(__DIR__ . '/Forms/Validators/EmailValidator.php');
 require_once(__DIR__ . '/Forms/Validators/AcceptedValidator.php');
-require_once(__DIR__ . '/Forms/Validators/RequiredValidator.php');
+require_once(__DIR__ . '/Forms/Validators/DateValidator.php');
+require_once(__DIR__ . '/Forms/Validators/CheckboxValidator.php');
 require_once(__DIR__ . '/Api/GoogleApi.php');
 require_once(__DIR__ . '/Helper/DistanceHelper.php');
 
 add_action('init', 'dw_init_php_session', 1);
+
 
 function dw_init_php_session()
 {
@@ -30,6 +32,8 @@ add_filter('use_block_editor_for_post', '__return_false');
 
 // Activer les images sur les articles
 add_theme_support('post-thumbnails');
+
+
 
 // enregistrer un custom post type module
 register_post_type('product', [
@@ -80,15 +84,15 @@ register_post_type('partner', [
 register_post_type('publication', [
     'label' => 'Publications',
     'labels' => [ //Ecraser des valeurs par defaut
-        'name' => 'Publications',
-        'singular_name' => 'Publications',
+        'name' => 'Références',
+        'singular_name' => 'Références',
     ],
-    'description' => "La ressource permettant de gérer les publications",
+    'description' => "La ressource permettant de gérer les références",
     'public' => true, //accessible dans l'interface admin (formulaire de contact: false)
     'menu_position' => 5,
     'menu_icon' => 'dashicons-book',
     'supports' => ['title', 'editor', 'thumbnail'],
-    'rewrite' => ['slug' => 'publications'],
+    'rewrite' => ['slug' => 'references'],
 ]);
 
 register_post_type('message', [
@@ -108,14 +112,14 @@ register_post_type('message', [
     'map_meta_cap' => true,
 ]);
 
-register_post_type('estimations', [
+register_post_type('estimation', [
     'label' => 'Estimations',
     'labels' => [ //Ecraser des valeurs par defaut
         'name' => 'Estimations',
         'singular_name' => 'Estimations',
     ],
     'description' => "Les messages envoyés par les utilisateurs via le formulaire d\'estimations",
-    'public' => false, //accessible dans l'interface admin (formulaire de contact: false)
+    'public' => true, //accessible dans l'interface admin (formulaire de contact: false)
     'show_ui' => true,
     'menu_position' => 10,
     'menu_icon' => 'dashicons-buddicons-pm',
@@ -124,6 +128,7 @@ register_post_type('estimations', [
     ],
     'map_meta_cap' => true,
 ]);
+
 
 // enregistrer le traitement du formulaire de contact personnalisé
 add_action('admin_post_nopriv_submit_contact_form', 'noair_handle_submit_contact_form');
@@ -276,4 +281,182 @@ function noair_mix($path)
 
     // C'est OK, on génère l'URL vers la ressource sur base du nom de fichier avec cache-bursting.
     return get_stylesheet_directory_uri() . '/public' . $manifest[$path];
+}
+
+function noair_getLatAndLngIssep(){
+    $position = get_post(246);
+
+    return [
+        'lat' => $position->lat,
+        'lng' => $position->lng
+    ];
+}
+
+function noair_calc_all_estimation_price_form(
+    $ministations,
+    $pollution,
+    $distance,
+    array $date,
+    $rapport,
+    $plateform,
+) {
+    return [
+        'ministation_price' => noair_calc_estimation_price_form(
+            $ministations,
+            $pollution,
+            $distance,
+            $date,
+            $rapport,
+            $plateform,
+            ['ministation_number' => true]
+        ),
+        'pollution_price' => noair_calc_estimation_price_form(
+            $ministations,
+            $pollution,
+            $distance,
+            $date,
+            $rapport,
+            $plateform,
+            ['pollution' => true]
+        ),
+        'distance_price' => noair_calc_estimation_price_form(
+            $ministations,
+            $pollution,
+            $distance,
+            $date,
+            $rapport,
+            $plateform,
+            ['distance' => true]
+        ),
+        'date_price' => noair_calc_estimation_price_form(
+            $ministations,
+            $pollution,
+            $distance,
+            $date,
+            $rapport,
+            $plateform,
+            ['date' => true]
+        ),
+        'rapport_price' => noair_calc_estimation_price_form(
+            $ministations,
+            $pollution,
+            $distance,
+            $date,
+            $rapport,
+            $plateform,
+            ['rapport' => true]
+        ),
+        'plateform_price' => noair_calc_estimation_price_form(
+            $ministations,
+            $pollution,
+            $distance,
+            $date,
+            $rapport,
+            $plateform,
+            ['plateform' => true]
+        ),
+        'total_price' => noair_calc_estimation_price_form(
+            $ministations,
+            $pollution,
+            $distance,
+            $date,
+            $rapport,
+            $plateform
+        ),
+    ];
+}
+
+function noair_calc_estimation_price_form(
+    $ministations,
+    $pollution,
+    $distance,
+    array $date,
+    $rapport,
+    $plateforme,
+    array $returns = [],
+) {
+    $total = 0;
+
+    if ($ministations) {
+        $ministationsPrice = 750 * (int) $ministations;
+        $total += $ministationsPrice;
+
+        if (isset($returns['ministation_number']) && $returns['ministation_number']) {
+            return $ministationsPrice;
+        }
+
+        if ($pollution) {
+            $pollutionPrice = (int) $ministations * count($pollution) * 100;
+            $total += $pollutionPrice;
+
+            if (isset($returns['pollution']) && $returns['pollution']) {
+                return $pollutionPrice;
+            }
+        } else {
+            if (isset($returns['pollution']) && $returns['pollution']) {
+                return 0;
+            }
+        }
+    } else {
+        if (isset($returns['ministation_number']) && $returns['ministation_number']) {
+            return 0;
+        }
+    }
+
+    if ($distance) {
+        $distancePrice = $distance * 1.6;
+        $total += $distancePrice;
+
+        if (isset($returns['distance']) && $returns['distance']) {
+            return $distancePrice;
+        }
+    } else {
+        if (isset($returns['distance']) && $returns['distance']) {
+            return 0;
+        }
+    }
+
+    if ($date) {
+        $dateStart = new DateTimeImmutable($date['start']);
+        $dateEnd = new DateTimeImmutable($date['end']);
+        $interval = $dateStart->diff($dateEnd);
+
+        $daysNumber = $interval->format('%a');
+        $numberTimesInDaysNumber = (int) ((int)$daysNumber / 90);
+
+        $datePrice = $numberTimesInDaysNumber * 500;
+        $total += $datePrice;
+
+        if (isset($returns['date']) && $returns['date']) {
+            return $datePrice;
+        }
+    }
+
+    if ($rapport) {
+        $rapportPrice = 1000;
+        $total += $rapportPrice;
+
+        if (isset($returns['rapport']) && $returns['rapport']) {
+            return $rapportPrice;
+        }
+    } else {
+        if (isset($returns['rapport']) && $returns['rapport']) {
+            return 0;
+        }
+    }
+
+    if ($plateforme) {
+        $plateformePrice = 1000;
+        $total += $plateformePrice;
+
+        if (isset($returns['plateform']) && $returns['plateform']) {
+            return $plateformePrice;
+        }
+    } else {
+        if (isset($returns['plateform']) && $returns['plateform']) {
+            return 0;
+        }
+    }
+
+    return $total;
 }

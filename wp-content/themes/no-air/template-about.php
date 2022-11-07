@@ -25,6 +25,17 @@
                     </figure>
                 </div>
             </section>
+            <section class="layout__about slide-in">
+                <div class="titleHeader space">
+                    <h2 class="title" role="heading" aria-level="2"><span class="light">Les </span>applications
+                    </h2>
+                    <span class="line"></span>
+                </div>
+                <div>
+                    <p>Pour le moment, nous avons testé nos modules dans différents endroits.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta eum eveniet, odit porro quibusdam quod unde vitae voluptatibus. Aperiam esse fugiat pariatur quas sint. Adipisci ducimus exercitationem natus.</p>
+                </div>
+            </section>
             <section class="layout__products slide-in">
                 <div class="layout__products--title">
                     <div class="titleHeader">

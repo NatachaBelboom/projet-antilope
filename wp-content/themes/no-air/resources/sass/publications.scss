@@ -39,6 +39,7 @@
       font-size: 1.6rem;
       line-height: 2.7rem;
       font-weight: 700;
+
     }
 
     & div{
@@ -65,6 +66,48 @@
 .pub .contactSection{
   margin-top: 15rem;
 }
+
+.science{
+  width: 899px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 3rem;
+  line-height: 1.4;
+
+  &__div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid black;
+  }
+
+  &__title{
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+    color: black;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  &__abstract{
+    margin: 1rem 0;
+    font-size: 14px;
+  }
+
+  &__date{
+    font-size: 14px;
+    display: block;
+    font-weight: 300;
+  }
+}
+
 
 @media (min-width: 700px) {
   .publications__container{

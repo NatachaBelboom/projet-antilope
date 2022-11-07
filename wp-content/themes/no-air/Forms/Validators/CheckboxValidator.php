@@ -1,10 +1,10 @@
 <?php
 
-class CheckboxValidator
+class CheckboxValidator extends BaseValidator
 {
     protected function handle($value) : ?string
     {
-        if($value !== '1')
+        if(empty($value))
         {
             return __('Veuillez cocher au moins une valeur', 'noair');
         }

@@ -18,7 +18,7 @@
 }
 
 .landing{
-  &__gradient{
+  /*&__gradient{
     background: linear-gradient(5deg, rgba(57,57,57,0.8) 0%, rgba(25,58,35,0.15)100%);
     position: absolute;
     top: 0;
@@ -26,8 +26,16 @@
     left: 0;
     right: 0;
     z-index: 1;
+  }*/
 
+  &__img{
+    background-image: linear-gradient(5deg, rgba(57,57,57,0.8) 0%, rgba(25,58,35,0.15)100%), url("../img/karel-vh-NWakNZvXyUE-unsplash-1024x767.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
   }
+
   &__fig{
     display: flex;
     justify-content: center;

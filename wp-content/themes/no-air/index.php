@@ -5,9 +5,10 @@
             <h2 class="sro" role="heading" aria-level="2">Introduction</h2>
             <div class="layout__landing landing">
                 <div class="landing__gradient"></div>
-                <figure class="landing__fig">
-                    <?= get_the_post_thumbnail(null, 'large', ['class' => 'landing__thumb']) ?>
-                </figure>
+                <div class="landing__img"></div>
+                <!--<figure class="landing__fig">
+                    <?/*= get_the_post_thumbnail(null, 'large', ['class' => 'landing__thumb']) */?>
+                </figure>-->
                 <div class="landing__intro slide-in">
                     <p><?= get_the_content(); ?></p>
                     <a href="<?= get_post_type_archive_link('product'); ?>" class="landing__link link">
