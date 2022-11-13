@@ -12,3 +12,4 @@ wp-content/*
 wp-content/themes/*
 !wp-content/themes/no-air
 wp-content/themes/no-air/public
+wp-content/themes/no-air/vendor

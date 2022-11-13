@@ -1,22 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a178f54e-50f2-42b7-85b4-283217917e6d" name="Changes" comment="add helper">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/ContactFormController.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/ContactFormController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/EstimationFormController.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/EstimationFormController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/Validators/DateValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/Validators/DateValidator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/publication.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/publication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/science.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/science.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/contact.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/contact.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/publications.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/publications.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-estimation.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-estimation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-presse.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-presse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-publications.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-publications.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-scientifique.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-scientifique.php" afterDir="false" />
+    <list default="true" id="a178f54e-50f2-42b7-85b4-283217917e6d" name="Changes" comment="validations">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +151,7 @@
       <workItem from="1667806599271" duration="7883000" />
       <workItem from="1667820163542" duration="12435000" />
       <workItem from="1668261924648" duration="8886000" />
-      <workItem from="1668348484963" duration="3138000" />
+      <workItem from="1668348484963" duration="3312000" />
     </task>
     <task id="LOCAL-00001" summary="add custom theme">
       <created>1652558054610</created>
@@ -265,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667820266549</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="validations">
+      <created>1668351703000</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1668351703000</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,6 +288,7 @@
     <MESSAGE value="estimations, css bug" />
     <MESSAGE value="estimations, home img" />
     <MESSAGE value="add helper" />
-    <option name="LAST_COMMIT_MESSAGE" value="add helper" />
+    <MESSAGE value="validations" />
+    <option name="LAST_COMMIT_MESSAGE" value="validations" />
   </component>
 </project>
