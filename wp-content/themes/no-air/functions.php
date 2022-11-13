@@ -1,5 +1,6 @@
 <?php
 
+require_once(__DIR__ . '/vendor/autoload.php');
 require_once(__DIR__ . '/Menus/MenuItem.php');
 require_once(__DIR__ . '/Forms/BaseFormController.php');
 require_once(__DIR__ . '/Forms/ContactFormController.php');
@@ -8,10 +9,17 @@ require_once(__DIR__ . '/Forms/Sanitizers/BaseSanitizer.php');
 require_once(__DIR__ . '/Forms/Sanitizers/TextSanitizer.php');
 require_once(__DIR__ . '/Forms/Sanitizers/EmailSanitizer.php');
 require_once(__DIR__ . '/Forms/Validators/BaseValidator.php');
+require_once(__DIR__ . '/Forms/Validators/AbsoluteNumberValidator.php');
+require_once(__DIR__ . '/Forms/Validators/AlphaValidator.php');
+require_once(__DIR__ . '/Forms/Validators/NumericValidator.php');
+require_once(__DIR__ . '/Forms/Validators/PollutionCheckboxValidator.php');
+require_once(__DIR__ . '/Forms/Validators/PostalCodeValidator.php');
 require_once(__DIR__ . '/Forms/Validators/RequiredValidator.php');
 require_once(__DIR__ . '/Forms/Validators/EmailValidator.php');
 require_once(__DIR__ . '/Forms/Validators/AcceptedValidator.php');
 require_once(__DIR__ . '/Forms/Validators/DateValidator.php');
+require_once(__DIR__ . '/Forms/Validators/DateFormatValidator.php');
+require_once(__DIR__ . '/Forms/Validators/DateEndValidator.php');
 require_once(__DIR__ . '/Forms/Validators/CheckboxValidator.php');
 require_once(__DIR__ . '/Api/GoogleApi.php');
 require_once(__DIR__ . '/Helper/DistanceHelper.php');

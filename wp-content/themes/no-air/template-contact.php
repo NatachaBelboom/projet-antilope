@@ -18,7 +18,7 @@ $form_type = 'feedback_contact_form';
                         <h3 role="heading" aria-level="3" class="sro">Les informations</h3>
                         <div itemscope itemtype="https://schema.org/Organization">
                             <h4 role="heading" aria-level="4" itemprop="legalName">L'ISSeP</h4>
-                            <p class="contact__infos--whyContact">Pour vos questions concernant les modules, les polluants ou  contactez-nous.</p>
+                            <p class="contact__infos--whyContact">Pour vos questions concernant <span class="color">l’organisation d’une campagne de mesure de surveillance de la qualité de l’air</span> ou tout type de <span class="color">développement en électronique</span>, contactez-nous.</p>
                             <div itemprop="location" itemscope itemtype="https://schema.org/PostalAddress" class="infos__container">
                                 <p class="address"><span itemprop="streetAddress">Rue Chéra, 200 </span><span itemprop="postalCode">4000 </span><span itemprop="addressLocality">Liège</span></p>
                                 <div>
@@ -29,12 +29,12 @@ $form_type = 'feedback_contact_form';
                         </div>
                         <div itemscope itemtype="https://schema.org/Organization">
                             <h4 role="heading" aria-level="4"><span itemprop="legalName">L'HEPL <span class="sro">Haute Ecole de la province de Liège</span></span> - option électronique et systèmes embarqués</h4>
-                            <p class="contact__infos--whyContact">Pour vos questions concernant lkae ezokoeg kcdmfpo osk contactez-nous.</p>
+                            <p class="contact__infos--whyContact">Pour vos questions concernant tout type de <span class="color">développement en électronique</span> ou sur les études du <span class="color">Master en Sciences de l'ingénieur industriel finalité électronique et systèmes embarqués</span>, contactez-nous.</p>
                             <div itemprop="location" itemscope itemtype="https://schema.org/PostalAddress" class="infos__container">
                                 <p class="address"><span itemprop="streetAddress">Quai Gloesener, 6 </span><span itemprop="postalCode">4000 </span><span itemprop="addressLocality">Liège</span></p>
                                 <div>
                                     <p>+32 4 279 55 20</p>
-                                    <a href="https://www.hepl.be/fr/master-ingenieur-industriel/electronique-systemes-embarques" target="_blank">www.hepl.be</a>
+                                    <a href="www ingehepl.be" target="_blank">www.ingehepl.be</a>
                                 </div>
                             </div>
                         </div>

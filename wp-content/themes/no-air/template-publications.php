@@ -32,7 +32,7 @@ $limit = 2;
                     <?php endif; ?>
                 </div>
                 <?php if ($the_query->found_posts > $limit): ?>
-                    <a href="<?= get_permalink(noair_get_template_page('template-presse')); ?>">
+                    <a href="<?= get_permalink(noair_get_template_page('template-presse')); ?>" class="publications__seeMore">
                         Voir toutes les publications presses
                     </a>
                 <?php endif; ?>
@@ -63,7 +63,7 @@ $limit = 2;
                     <?php endif; ?>
                 </div>
                 <?php if ($the_query->found_posts > $limit): ?>
-                    <a href="<?= get_permalink(noair_get_template_page('template-scientifique')); ?>">
+                    <a href="<?= get_permalink(noair_get_template_page('template-scientifique')); ?>" class="publications__seeMore">
                         Voir toutes les publications scientifiques
                     </a>
                 <?php endif; ?>

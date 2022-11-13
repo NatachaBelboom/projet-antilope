@@ -23,8 +23,8 @@ class ContactFormController extends BaseFormController
     {
         return [
             'choice' => [RequiredValidator::class],
-            'firstname' => [RequiredValidator::class],
-            'lastname' => [RequiredValidator::class],
+            'firstname' => [RequiredValidator::class, AlphaValidator::class],
+            'lastname' => [RequiredValidator::class, AlphaValidator::class],
             'email' => [RequiredValidator::class, EmailValidator::class],
             'message' => [RequiredValidator::class],
             'rules' => [AcceptedValidator::class],
@@ -71,7 +71,7 @@ class ContactFormController extends BaseFormController
                 break;
             case 'sectionMoreInfo':
                 $subject = 'avoir plus d\'infos sur la section électronique et systèmes embarqués';
-                $email = 'natacha.belboom@student.hepl.com';
+                $email = 'natacha.belboom@student.hepl.be';
                 break;
             case 'orderProduct':
                 $subject = 'commander un module';

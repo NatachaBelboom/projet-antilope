@@ -81,7 +81,7 @@
   }
 }
 
-@media (max-width: 492px){
+@media (max-width: 510px){
   .footer__copyright{
     order: 3;
     margin: 0 auto;
@@ -103,20 +103,47 @@
   .facebook-container{
     right: 50%;
     transform: translateX(50%);
+
+    &::after{
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -7px;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 7px solid #fff;
+      clear: both;
+    }
+
+    &::before{
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      width: 0;
+      height: 0;
+      left: 50%;
+      border-left: 11px solid transparent;
+      border-right: 11px solid transparent;
+      transform: translateX(-50%);
+      border-top: 8px solid lightgrey;
+    }
   }
 
   .logo {
-    width: 80px;
-    height: auto;
+  width: 80px;
+  height: auto;
   }
 
   .facebook {
-    width: 15px;
-    height: auto;
+  width: 15px;
+  height: auto;
   }
   .insta {
-    width: 30px;
-    height: auto;
+  width: 30px;
+  height: auto;
   }
 }
 

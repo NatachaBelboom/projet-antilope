@@ -27,14 +27,14 @@ class EstimationFormController extends BaseFormController
     protected function getValidatableAttributes() : array
     {
         return [
-            'firstname' => [RequiredValidator::class],
-            'lastname' => [RequiredValidator::class],
+            'firstname' => [RequiredValidator::class, AlphaValidator::class],
+            'lastname' => [RequiredValidator::class, AlphaValidator::class],
             'email' => [RequiredValidator::class, EmailValidator::class],
-            'ministation_number' => [RequiredValidator::class],
-            'pollution' => [/*CheckboxValidator::class, */RequiredValidator::class],
-            'date_start' => [RequiredValidator::class/*, DateValidator::class*/],
-            'date_end' => [RequiredValidator::class],
-            'postal' => [RequiredValidator::class],
+            'ministation_number' => [RequiredValidator::class, AbsoluteNumberValidator::class],
+            'pollution' => [RequiredValidator::class, PollutionCheckboxValidator::class],
+            'date_start' => [RequiredValidator::class, DateFormatValidator::class, DateValidator::class],
+            'date_end' => [RequiredValidator::class, DateFormatValidator::class, DateValidator::class, DateEndValidator::class],
+            'postal' => [RequiredValidator::class, NumericValidator::class, PostalCodeValidator::class],
             'rapport' => [RequiredValidator::class],
             'plateform' => [RequiredValidator::class],
             'message' => [RequiredValidator::class],
@@ -129,7 +129,6 @@ class EstimationFormController extends BaseFormController
 
         // Envoyer l'email à l'admin
         $mail = wp_mail('natacha.belboom@hotmail.com', 'Nouvelle estimation', $estimationMessage);
-        var_dump($mail); die();
     }
 
     protected function redirectWithSuccess()

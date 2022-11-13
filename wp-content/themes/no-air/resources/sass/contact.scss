@@ -14,9 +14,16 @@
 
     &--whyContact{
       font-size: 14px;
+      line-height: 1.8;
     }
   }
 }
+
+.color{
+  font-weight: 700;
+  color: $green;
+}
+
 .infos__container{
   line-height: 3rem;
   display: flex;
@@ -107,7 +114,8 @@
     font-weight: 700;
     color: darkgreen;
     font-size: 2rem;
-    align-self: center;
+    align-self: start;
+    margin-top: 0.5rem;
   }
 
 }
@@ -120,12 +128,12 @@
 
 @media (min-width: 1000px){
   .contact__container{
-
     display: grid;
     grid-auto-flow: dense;
     grid-column-gap: 4rem;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
-
+    margin: 0 5rem;
   }
 
   .form{

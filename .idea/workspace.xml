@@ -1,30 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a178f54e-50f2-42b7-85b4-283217917e6d" name="Changes" comment="estimations, css bug">
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/Validators/DateValidator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/img/karel-vh-NWakNZvXyUE-unsplash-1024x767.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/img/karel-vh-NWakNZvXyUE-unsplash-150x150.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/img/karel-vh-NWakNZvXyUE-unsplash-1536x1151.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/img/karel-vh-NWakNZvXyUE-unsplash-300x225.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/img/karel-vh-NWakNZvXyUE-unsplash-768x576.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/img/karel-vh-NWakNZvXyUE-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-presse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-scientifique.php" afterDir="false" />
+    <list default="true" id="a178f54e-50f2-42b7-85b4-283217917e6d" name="Changes" comment="add helper">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/Validators/CheckboxValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/Validators/CheckboxValidator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/Validators/RequiredValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/Validators/RequiredValidator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/ContactFormController.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/ContactFormController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/EstimationFormController.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/EstimationFormController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/Validators/DateValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/Validators/DateValidator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/publication.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/publication.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/science.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Partials/science.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/contact.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/contact.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/estimation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/estimation.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/footer.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/publications.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/publications.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-about.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-contact.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-estimation.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-estimation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-presse.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-presse.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-publications.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-publications.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-scientifique.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-scientifique.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,17 +48,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/wp-content/themes/no-air/resources/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/wp-content/themes/no-air" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\wp-content\themes\no-air" />
       <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\wp-content\themes\no-air\resources\img" />
       <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\wp-content\themes\no-air\resources\sass" />
       <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\wp-content\themes\no-air\resources\fonts" />
       <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\sans-wordpress\img" />
-      <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\wp-content\themes\no-air" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\wp-content\themes\no-air" />
@@ -171,6 +163,9 @@
       <workItem from="1667492454392" duration="2243000" />
       <workItem from="1667595641016" duration="672000" />
       <workItem from="1667806599271" duration="7883000" />
+      <workItem from="1667820163542" duration="12435000" />
+      <workItem from="1668261924648" duration="8886000" />
+      <workItem from="1668348484963" duration="3138000" />
     </task>
     <task id="LOCAL-00001" summary="add custom theme">
       <created>1652558054610</created>
@@ -256,7 +251,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667046371456</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="estimations, home img">
+      <created>1667820219842</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1667820219842</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add helper">
+      <created>1667820266549</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1667820266549</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,6 +293,8 @@
     <MESSAGE value="last changes" />
     <MESSAGE value="logo changed, mentions" />
     <MESSAGE value="estimations, css bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="estimations, css bug" />
+    <MESSAGE value="estimations, home img" />
+    <MESSAGE value="add helper" />
+    <option name="LAST_COMMIT_MESSAGE" value="add helper" />
   </component>
 </project>

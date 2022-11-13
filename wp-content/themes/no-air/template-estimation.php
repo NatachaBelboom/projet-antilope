@@ -86,11 +86,17 @@ $form_type = 'feedback_estimation_form';
                                     'post_type' => 'pollution',
                                     'order' => 'DESC',
                                 ]);
+                                $oldPollution = empty(noair_get_form_field_value('pollution', $form_type))
+                                    ? []
+                                    : noair_get_form_field_value('pollution', $form_type);
 
                                 if (($pollution->have_posts())) : while ($pollution->have_posts()) : $pollution->the_post(); ?>
                                     <div class="checkbox__container">
-                                        <input type="checkbox" id="pollution-<?= get_the_ID() ?>" name="pollution[]"
-                                               value="<?= get_the_title() ?>">
+                                        <input type="checkbox" id="pollution-<?= get_the_ID() ?>"
+                                               name="pollution[]"
+                                               value="<?= get_the_ID() ?>"
+                                            <?= in_array(get_the_ID(), $oldPollution) ? 'checked' : '' ?>
+                                        >
                                         <label for="pollution-<?= get_the_ID() ?>"
                                                class="form__label--smaller"><?= get_the_title() ?></label>
                                     </div>
@@ -119,20 +125,40 @@ $form_type = 'feedback_estimation_form';
                             </div>
                             <div class="form__field">
                                 <p class="form__label">Souhaitez-vous un rapport?</p>
-                                <input type="radio" id="rapport-yes" name="rapport" value="1">
+                                <input type="radio"
+                                       id="rapport-yes"
+                                       name="rapport"
+                                       value="1"
+                                    <?= noair_get_form_field_value('rapport', $form_type) === '1' ? 'checked' : '' ?>
+                                >
                                 <label for="rapport-yes" class="form__label--smaller">Oui</label>
 
-                                <input type="radio" id="rapport-no" name="rapport" value="0">
+                                <input type="radio"
+                                       id="rapport-no"
+                                       name="rapport"
+                                       value="0"
+                                       <?= noair_get_form_field_value('rapport', $form_type) === '0' ? 'checked' : '' ?>
+                                >
                                 <label for="rapport-no" class="form__label--smaller">Non</label>
 
                                 <?= noair_get_form_field_error('rapport', $form_type); ?>
                             </div>
                             <div class="form__field">
                                 <p class="form__label">Souhaitez-vous une plateforme?</p>
-                                <input type="radio" id="plateform-yes" name="plateform" value="1">
+                                <input type="radio"
+                                       id="plateform-yes"
+                                       name="plateform"
+                                       value="1"
+                                    <?= noair_get_form_field_value('plateform', $form_type) === '1' ? 'checked' : '' ?>
+                                >
                                 <label for="plateform-yes" class="form__label--smaller">Oui</label>
 
-                                <input type="radio" id="plateform-no" name="plateform" value="0">
+                                <input type="radio"
+                                       id="plateform-no"
+                                       name="plateform"
+                                       value="0"
+                                    <?= noair_get_form_field_value('plateform', $form_type) === '0' ? 'checked' : '' ?>
+                                >
                                 <label for="plateform-no" class="form__label--smaller">Non</label>
 
                                 <?= noair_get_form_field_error('plateform', $form_type); ?>

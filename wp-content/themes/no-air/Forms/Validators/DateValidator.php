@@ -1,15 +1,15 @@
 <?php
 
+use Carbon\Carbon;
+
 class DateValidator extends BaseValidator
 {
     protected function handle($value): ?string
     {
-        if ($value < strtotime('today')) {
-            return __('Cette date doit être dans le futur', 'noair');
-        }
+        $date = Carbon::parse($value);
 
-        if($value ){
-            return __('Cette date n\'est pas valide', 'noair');
+        if (Carbon::now()->diffInSeconds($date, false) < 0) {
+            return __('Cette date doit être dans le futur', 'noair');
         }
 
         return null;
