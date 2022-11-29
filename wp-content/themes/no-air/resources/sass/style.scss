@@ -14,6 +14,13 @@ body, body * {
 body{
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main{
+  flex: 1;
 }
 
 .sro {

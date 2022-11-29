@@ -116,6 +116,15 @@
     font-size: 2rem;
     align-self: start;
     margin-top: 0.5rem;
+
+    &--estimation{
+      margin-top: 5rem;
+      text-align: center;
+      font-weight: 700;
+      color: darkgreen;
+      font-size: 2rem;
+      align-self: start;
+    }
   }
 
 }

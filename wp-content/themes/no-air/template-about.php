@@ -8,7 +8,8 @@
         <div class="container">
             <section class="layout__about about slide-in">
                 <div class="titleHeader space">
-                    <h2 class="title" role="heading" aria-level="2"><span class="light">Qu'est-ce que </span>le projet NOair
+                    <h2 class="title" role="heading" aria-level="2"><span class="light">Qu'est-ce que </span>le projet
+                        NOair
                     </h2>
                     <span class="line"></span>
                 </div>
@@ -25,16 +26,38 @@
                     </figure>
                 </div>
             </section>
-            <section class="layout__about slide-in">
-                <div class="titleHeader space">
-                    <h2 class="title" role="heading" aria-level="2"><span class="light">Les </span>applications
+            <section class="layout__about slide-in campaign-grid">
+                <div class="titleHeader space campaign-title">
+                    <h2 class="title" role="heading" aria-level="2"><span class="light">Nos différentes </span>campagnes
                     </h2>
                     <span class="line"></span>
                 </div>
-                <div>
-                    <p>Pour le moment, nous avons testé nos modules dans différents endroits.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta eum eveniet, odit porro quibusdam quod unde vitae voluptatibus. Aperiam esse fugiat pariatur quas sint. Adipisci ducimus exercitationem natus.</p>
-                </div>
+
+                <?php
+                $limit = 2;
+                $campaign = new WP_Query([
+                    'post_type' => 'campagne',
+                    'order' => 'DESC',
+                    'posts_per_page' => $limit,
+                ]);
+                if (($campaign->have_posts())) : while ($campaign->have_posts()) : $campaign->the_post(); ?>
+                    <div class="campaign">
+                        <div>
+                            <p class="campaign__title"><?= the_title(); ?></p>
+                            <?= get_field('description'); ?>
+                        </div>
+                        <div class="campaign-imgContainer">
+                            <?= wp_get_attachment_image(get_field('img'), 'large', false, array('class' => 'campaign__img')); ?>
+                        </div>
+                    </div>
+                <?php endwhile; else: ?>
+                <?php endif; ?>
+
+                <?php if ($campaign->found_posts > $limit): ?>
+                <a href="<?= get_permalink(noair_get_template_page('template-campaign')); ?>" class="publications__seeMore campaign-button">
+                    Voir toutes les campagnes
+                </a>
+                <?php endif; ?>
             </section>
             <section class="layout__products slide-in">
                 <div class="layout__products--title">
@@ -87,11 +110,13 @@
                 </div>
             </section>
             <section class="layout__contactSection contactSection slide-in">
-                <?= wp_get_attachment_image(get_field('contact_logo'),'medium', false, array('class' => 'contactSection__img')); ?>
+                <?= wp_get_attachment_image(get_field('contact_logo'), 'medium', false, array('class' => 'contactSection__img')); ?>
                 <div>
                     <h2 class="contactSection__title" role="heading" aria-level="2">Contactez-nous</h2>
-                    <p>Nos produits vous <strong>plaisent</strong>? Envie d'avoir plus d'informations sur un <strong>module</strong>?</p>
-                    <a href="<?= get_permalink(noair_get_template_page('template-contact')); ?>" class="contactSection__link link">
+                    <p>Nos produits vous <strong>plaisent</strong>? Envie d'avoir plus d'informations sur un <strong>module</strong>?
+                    </p>
+                    <a href="<?= get_permalink(noair_get_template_page('template-contact')); ?>"
+                       class="contactSection__link link">
                         Envoyez-nous un mail
                         <?php noair_include('arrow-next'); ?>
                     </a>

@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a178f54e-50f2-42b7-85b4-283217917e6d" name="Changes" comment="validations">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-campaign.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/about.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/about.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/contact.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/contact.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/publications.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/publications.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-about.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-estimation.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-estimation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-presse.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-presse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-publications.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-publications.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-scientifique.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-scientifique.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,20 +36,21 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="27k9WChYJ5W9FaVMOVjqTX4yX0i" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/wp-content/themes/no-air" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\wp-content\themes\no-air" />
@@ -151,7 +164,9 @@
       <workItem from="1667806599271" duration="7883000" />
       <workItem from="1667820163542" duration="12435000" />
       <workItem from="1668261924648" duration="8886000" />
-      <workItem from="1668348484963" duration="3312000" />
+      <workItem from="1668348484963" duration="7289000" />
+      <workItem from="1669209339934" duration="5242000" />
+      <workItem from="1669639849129" duration="293000" />
     </task>
     <task id="LOCAL-00001" summary="add custom theme">
       <created>1652558054610</created>
@@ -258,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668351703000</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="validations">
+      <created>1668351893767</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1668351893767</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +296,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add custom theme" />

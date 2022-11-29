@@ -2,7 +2,7 @@
 /*
 * Template Name: Presse Page Template
 */
-$paginationLimit = 2;
+$paginationLimit = 15;
 ?>
 
 <?php get_header(); ?>
@@ -55,5 +55,25 @@ $paginationLimit = 2;
             </section>
             <?php wp_reset_postdata(); ?>
         </div>
+        <section class="layout__contactSection contactSection slide-in">
+            <?= get_the_post_thumbnail(
+                null,
+                'medium',
+                array('srcset' => wp_get_attachment_image_url( get_post_thumbnail_id(), 'neve-blog' ) . ' 480w, ' .
+                    wp_get_attachment_image_url( get_post_thumbnail_id(), 'thumbnail' ) . ' 640w, ' .
+                    wp_get_attachment_image_url( get_post_thumbnail_id(), 'MedLarge') . ' 960w', 'class' => 'contactSection__img'
+                )
+            ); ?>
+            <div>
+                <h2 class="contactSection__title" role="heading" aria-level="2">Contactez-nous</h2>
+                <p>Nos produits vous <strong>plaisent</strong>? Envie d'avoir plus d'informations sur un <strong>module</strong>?
+                </p>
+                <a href="<?= get_permalink(noair_get_template_page('template-contact')); ?>"
+                   class="contactSection__link link">
+                    Envoyez-nous un mail
+                    <?php noair_include('arrow-next'); ?>
+                </a>
+            </div>
+        </section>
     </main>
 <?php get_footer(); ?>

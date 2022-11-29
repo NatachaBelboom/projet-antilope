@@ -3,7 +3,7 @@
 * Template Name: Publications Page Template
 */
 
-$limit = 2;
+$limit = 6;
 ?>
 
 <?php get_header(); ?>

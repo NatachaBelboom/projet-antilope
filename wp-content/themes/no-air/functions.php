@@ -103,6 +103,20 @@ register_post_type('publication', [
     'rewrite' => ['slug' => 'references'],
 ]);
 
+register_post_type('campagne', [
+    'label' => 'Campagnes',
+    'labels' => [ //Ecraser des valeurs par defaut
+        'name' => 'Campagnes',
+        'singular_name' => 'Campagnes',
+    ],
+    'description' => "La ressource permettant de gérer les campagnes",
+    'public' => true, //accessible dans l'interface admin (formulaire de contact: false)
+    'menu_position' => 5,
+    'menu_icon' => 'dashicons-book',
+    'supports' => ['title', 'editor', 'thumbnail'],
+    'rewrite' => ['slug' => 'references'],
+]);
+
 register_post_type('message', [
     'label' => 'Messages de contact',
     'labels' => [ //Ecraser des valeurs par defaut

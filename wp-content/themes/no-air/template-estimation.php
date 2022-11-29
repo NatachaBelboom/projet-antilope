@@ -187,7 +187,7 @@ $form_type = 'feedback_estimation_form';
                             </div>
                         </form>
                     <?php else : ?>
-                        <p class="form__feedback"><?= __('Merci de nous avoir contacté, à bientôt !', 'noair'); ?></p>
+                        <p class="form__feedback--estimation"><?= __('Merci de nous avoir contacté, à bientôt !', 'noair'); ?></p>
                     <?php endif; ?>
                     <?php unset($_SESSION['feedback_estimation_form']); ?>
                 </div>
