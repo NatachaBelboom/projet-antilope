@@ -10,7 +10,7 @@ $form_type = 'feedback_contact_form';
         <div class="container">
             <section class="slide-in">
                 <div class="titleHeader space">
-                    <h2 class="title" role="heading" aria-level="2"><span class="light">N'hésitez pas à </span>Nous contacter</h2>
+                    <h2 class="title" role="heading" aria-level="2"><span class="light">N'hésitez pas à </span>nous contacter</h2>
                     <span class="line"></span>
                 </div>
                 <div class="contact__container">
@@ -22,7 +22,7 @@ $form_type = 'feedback_contact_form';
                             <div itemprop="location" itemscope itemtype="https://schema.org/PostalAddress" class="infos__container">
                                 <p class="address"><span itemprop="streetAddress">Rue Chéra, 200 </span><span itemprop="postalCode">4000 </span><span itemprop="addressLocality">Liège</span></p>
                                 <div>
-                                    <p>+32 4 229 83 11</p>
+                                    <p><a href="tel:+32 4 229 83 11" class="not_link">+32 4 229 83 11</a></p>
                                     <a href="https://www.issep.be/">www.issep.be</a>
                                 </div>
                             </div>
@@ -33,8 +33,8 @@ $form_type = 'feedback_contact_form';
                             <div itemprop="location" itemscope itemtype="https://schema.org/PostalAddress" class="infos__container">
                                 <p class="address"><span itemprop="streetAddress">Quai Gloesener, 6 </span><span itemprop="postalCode">4000 </span><span itemprop="addressLocality">Liège</span></p>
                                 <div>
-                                    <p>+32 4 279 55 20</p>
-                                    <a href="www ingehepl.be" target="_blank">www.ingehepl.be</a>
+                                    <p><a href="tel:+32 4 279 55 20" class="not_link">+32 4 279 55 20</a></p>
+                                    <a href="https://www.ingehepl.be" target="_blank">www.ingehepl.be</a>
                                 </div>
                             </div>
                         </div>
@@ -89,11 +89,9 @@ $form_type = 'feedback_contact_form';
                                 <div class="form__field">
                                     <label for="rules" class="form__checkbox">
                                         <input type="checkbox" name="rules" id="rules" class="form__checker" value="1">
-                                        <span class="form__checklabel"><?= str_replace(
-                                                ':conditions',
-                                                '<a href="#">' . __('conditions générales d’utilisation','noair') . '</a>',
-                                                __('J’ai lu et j’accepte les :conditions.', 'noair')
-                                            ); ?></span>
+                                        <span class="form__checklabel">
+                                            J'ai lu et j'accepte les <a href="<?= get_permalink(noair_get_template_page('template-mentions')); ?>">conditions générales d'utilisation.</a>
+                                        </span>
                                     </label>
                                     <?= noair_get_form_field_error('rules', $form_type); ?>
                                 </div>

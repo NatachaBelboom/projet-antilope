@@ -14,6 +14,9 @@ $limit = 6;
                 $the_query = new WP_Query([
                     'post_type' => 'publication',
                     'posts_per_page' => $limit,
+                    'meta_key' => 'date',
+                    'orderby' => 'meta_value',
+                    'order' => 'DESC',
                     'meta_query' => [
                         ['key' => 'presse',
                             'compare' => '==',
@@ -44,6 +47,9 @@ $limit = 6;
                     $the_query = new WP_Query([
                         'post_type' => 'publication',
                         'posts_per_page' => $limit,
+                        'meta_key' => 'date',
+                        'orderby' => 'meta_value',
+                        'order' => 'DESC',
                         'meta_query' => [
                             ['key' => 'scientifique',
                                 'compare' => '==',

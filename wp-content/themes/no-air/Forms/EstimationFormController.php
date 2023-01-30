@@ -72,8 +72,12 @@ class EstimationFormController extends BaseFormController
         $coordinate = $google->getCoordinateFromZipCode($postalCode);
         $ownPoint = noair_getLatAndLngIssep();
 
-        $distance = DistanceHelper::calcDistanceInKm($ownPoint, $coordinate);
-        $formatDistance = number_format((float)$distance, 2, '.', '');
+        if (!empty($coordinate)) {
+            $distance = DistanceHelper::calcDistanceInKm($ownPoint, $coordinate);
+            $formatDistance = number_format((float)$distance, 2, '.', '');
+        } else {
+            $formatDistance = 0;
+        }
 
         $allPrice = noair_calc_all_estimation_price_form(
             $ministationNumber,
@@ -83,14 +87,6 @@ class EstimationFormController extends BaseFormController
             $rapport,
             $plateform,
         );
-
-        $email = "natacha.belboom@hotmail.com";
-
-        /*$content = 'Bonjour, vous avez reçu une nouvelle estimation.';
-        $content .= 'de ' . ucfirst( $firstname ) . ' ' . strtoupper( $lastname );
-        $content .= 'email : ' . $sender;
-        $content .= 'Message : ' . $message;
-        $content .= 'Calcul de l\'estimation: ';*/
 
         $estimationMessage = 'Nombre de ministation: ' . $ministationNumber . '. Coût: ' . $allPrice['ministation_price'] . '€. <br/>';
         $estimationMessage .= 'Les polluants sélectionnés sont: ' . json_encode($pollutions) . '. Coût: ' . $allPrice['pollution_price'] . '€. <br/>';
@@ -127,8 +123,13 @@ class EstimationFormController extends BaseFormController
             ],
         ]);
 
+        $content = 'Bonjour, vous avez reçu une nouvelle estimation:';
+        $content .= 'De ' . ucfirst( $firstname ) . ' ' . strtoupper( $lastname );
+        $content .= 'Email : ' . $sender;
+        $content .= 'Message : ' . $message;
+
         // Envoyer l'email à l'admin
-        $mail = wp_mail('natacha.belboom@hotmail.com', 'Nouvelle estimation', $estimationMessage);
+        wp_mail(get_bloginfo('admin_email'), 'Nouvelle estimation', $content);
     }
 
     protected function redirectWithSuccess()

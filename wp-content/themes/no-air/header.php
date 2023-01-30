@@ -16,7 +16,7 @@
 <header>
     <div class="container header">
         <h1 role="heading" aria-level="1" class="sro"><?= is_front_page() ? the_title() : wp_title('') ?></h1>
-        <a href="/" class="header__logo">
+        <a href="<?= get_home_url() ?>" class="header__logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="189.525" height="37" viewBox="0 0 189.525 37">
                 <g id="Groupe_77" data-name="Groupe 77" transform="translate(-109.001 -34)">
                     <text id="Antilopinae" transform="translate(109.001 62)" fill="#161615" font-size="27" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Antilopinae</tspan></text>

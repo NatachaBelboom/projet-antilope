@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a178f54e-50f2-42b7-85b4-283217917e6d" name="Changes" comment="validations">
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-campaign.php" afterDir="false" />
+    <list default="true" id="a178f54e-50f2-42b7-85b4-283217917e6d" name="Changes" comment="css modifications">
+      <change beforePath="$PROJECT_DIR$/.idea/projet-antilope.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projet-antilope.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Api/GoogleApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Api/GoogleApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/ContactFormController.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/ContactFormController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/EstimationFormController.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/Forms/EstimationFormController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/about.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/about.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/contact.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/contact.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/publications.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/publications.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/products.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/resources/sass/products.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/screenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/screenshot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/single-product.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/single-product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-about.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-campaign.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-campaign.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-contact.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-estimation.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-estimation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-presse.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-presse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-mentions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-mentions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-pollution.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-pollution.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-publications.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-publications.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/no-air/template-scientifique.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/no-air/template-scientifique.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +49,11 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
+  </component>
   <component name="ProjectId" id="27k9WChYJ5W9FaVMOVjqTX4yX0i" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -46,18 +61,21 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Users/natac/Documents NO onedrive/.htaccess&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope" />
       <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\wp-content\themes\no-air" />
       <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\wp-content\themes\no-air\resources\img" />
       <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\wp-content\themes\no-air\resources\sass" />
       <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\wp-content\themes\no-air\resources\fonts" />
-      <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\sans-wordpress\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Users\natac\Documents NO onedrive\projet-antilope\wp-content\themes\no-air" />
@@ -167,6 +185,28 @@
       <workItem from="1668348484963" duration="7289000" />
       <workItem from="1669209339934" duration="5242000" />
       <workItem from="1669639849129" duration="293000" />
+      <workItem from="1669732078172" duration="3111000" />
+      <workItem from="1669817626480" duration="23000" />
+      <workItem from="1669907036785" duration="90000" />
+      <workItem from="1669909075968" duration="686000" />
+      <workItem from="1670160467231" duration="7404000" />
+      <workItem from="1670340546460" duration="12000" />
+      <workItem from="1670410251366" duration="1984000" />
+      <workItem from="1670593804231" duration="1987000" />
+      <workItem from="1670596006031" duration="1054000" />
+      <workItem from="1670765604422" duration="794000" />
+      <workItem from="1670831277902" duration="16114000" />
+      <workItem from="1671443528020" duration="10793000" />
+      <workItem from="1671530891541" duration="593000" />
+      <workItem from="1671544094083" duration="1700000" />
+      <workItem from="1673553922161" duration="620000" />
+      <workItem from="1674132754446" duration="1169000" />
+      <workItem from="1674572163503" duration="100000" />
+      <workItem from="1674673602340" duration="1104000" />
+      <workItem from="1674738330347" duration="19000" />
+      <workItem from="1674738593762" duration="2464000" />
+      <workItem from="1674836808936" duration="2820000" />
+      <workItem from="1675076740386" duration="4775000" />
     </task>
     <task id="LOCAL-00001" summary="add custom theme">
       <created>1652558054610</created>
@@ -280,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668351893767</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="css modifications">
+      <created>1669732131090</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1669732131090</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,6 +357,7 @@
     <MESSAGE value="estimations, home img" />
     <MESSAGE value="add helper" />
     <MESSAGE value="validations" />
-    <option name="LAST_COMMIT_MESSAGE" value="validations" />
+    <MESSAGE value="css modifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="css modifications" />
   </component>
 </project>

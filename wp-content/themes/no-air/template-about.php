@@ -52,7 +52,6 @@
                     </div>
                 <?php endwhile; else: ?>
                 <?php endif; ?>
-
                 <?php if ($campaign->found_posts > $limit): ?>
                 <a href="<?= get_permalink(noair_get_template_page('template-campaign')); ?>" class="publications__seeMore campaign-button">
                     Voir toutes les campagnes
@@ -80,9 +79,7 @@
                         else: ?>
                             <p class="products__empty">Il n'y a pas encore de modules a présenter</p>
                         <?php endif; ?>
-                        <?php
-                        // Reset the global post object so that the rest of the page works correctly.
-                        wp_reset_postdata(); ?>
+                        <?php wp_reset_postdata(); ?>
                     </div>
                 </div>
             </section>
@@ -104,9 +101,7 @@
                     else: ?>
                         <p class="products__empty">Nous n'avons pas encore de partenaire</p>
                     <?php endif; ?>
-                    <?php
-                    // Reset the global post object so that the rest of the page works correctly.
-                    wp_reset_postdata(); ?>
+                    <?php wp_reset_postdata(); ?>
                 </div>
             </section>
             <section class="layout__contactSection contactSection slide-in">
@@ -124,5 +119,4 @@
             </section>
         </div>
     </main>
-
 <?php get_footer(); ?>

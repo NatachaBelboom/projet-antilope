@@ -56,7 +56,6 @@ class ContactFormController extends BaseFormController
         ]);
 
 
-        $choice   = '';
         $email     = '';
         $sender    = $this->data[ 'email' ];
         $firstname = $this->data[ 'firstname' ];
@@ -83,10 +82,10 @@ class ContactFormController extends BaseFormController
                 break;
         }
 
-        $content = 'Bonjour, un nouveau message de contact a été envoyé.';
-        $content .= 'de ' . ucfirst( $firstname ) . ' ' . strtoupper( $lastname );
-        $content .= 'A propos de ' . $choice ;
-        $content .= 'email : ' . $sender;
+        $content = 'Bonjour, un nouveau message de contact a été envoyé.' ;
+        $content .= 'De ' . ucfirst( $firstname ) . ' ' . strtoupper( $lastname );
+        $content .= 'A propos de ' . $subject ;
+        $content .= 'Email : ' . $sender ;
         $content .= 'Message : ' . $message;
 
         // Envoyer l'email à l'admin

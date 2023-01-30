@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
     <main class="layout">
         <div class="container">
             <section class="layout__single single slide-in">

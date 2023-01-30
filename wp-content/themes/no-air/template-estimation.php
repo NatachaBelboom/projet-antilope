@@ -69,14 +69,14 @@ $form_type = 'feedback_estimation_form';
                             </div>
                             <div class="form__field">
                                 <label for="ministation_number"
-                                       class="form__label">Nombre de ministations *</label>
+                                       class="form__label">Nombre de modules *</label>
                                 <input class="form__input"
                                        type="number"
                                        id="ministation_number"
                                        name="ministation_number"
                                        min="0"
                                        value="<?= noair_get_form_field_value('ministation_number', $form_type) ?>"
-                                       placeholder="Nombre de ministation">
+                                       placeholder="Nombre de modules">
                                 <?= noair_get_form_field_error('ministation_number', $form_type); ?>
                             </div>
                             <div class="form__field">

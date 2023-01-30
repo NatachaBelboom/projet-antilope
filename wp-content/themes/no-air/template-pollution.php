@@ -76,7 +76,7 @@
                 </div>
             </section>
             <section class="layout__contactSection contactSection slide-in">
-                <?= wp_get_attachment_image(get_field('contact_logo'), 'medium', false, array('class' => 'contactSection__img')); ?>
+                <?= get_the_post_thumbnail(null, 'large', ['class' => 'contactSection__img']); ?>
                 <div>
                     <h2 class="contactSection__title" role="heading" aria-level="2">Contactez-nous</h2>
                     <p>Nos produits vous <strong>plaisent</strong>? Envie d'avoir plus d'informations sur un <strong>module</strong>?

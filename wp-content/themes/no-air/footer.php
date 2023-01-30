@@ -25,7 +25,7 @@
                 </a>
             </li>
             <li>
-                <a href="https://www.instagram.com/ingehepl/?hl=fr" target="_blank">
+                <a href="https://www.instagram.com/service.electronique.hepl/" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20.003" height="19.999" viewBox="0 0 20.003 19.999"
                          class="insta">
                         <title>Le logo du réseau social Instagram</title>
@@ -48,14 +48,6 @@
                 <ul class="facebook-container">
                     <li class="facebook-links">
                         <a href="https://www.facebook.com/ISILELECTRO" target="_blank">
-                            <!--<svg xmlns="http://www.w3.org/2000/svg" width="8,97" height="16,75"
-                                 viewBox="0 0 11.096 20.717" class="facebook">
-                                <title>Le logo du réseau social Facebook</title>
-                                <desc>La lettre F</desc>
-                                <path id="Icon_awesome-facebook-f" data-name="Icon awesome-facebook-f"
-                                      d="M11.978,11.653,12.553,7.9h-3.6V5.471A1.875,1.875,0,0,1,11.07,3.445h1.635V.253A19.944,19.944,0,0,0,9.8,0C6.839,0,4.9,1.8,4.9,5.046V7.9H1.609v3.749H4.9v9.064H8.956V11.653Z"
-                                      transform="translate(-1.609)"/>
-                            </svg>-->
                             <svg xmlns="http://www.w3.org/2000/svg" width="8.97" height="16.748" viewBox="0 0 8.97 16.748">
                                 <path id="Icon_awesome-facebook-f" data-name="Icon awesome-facebook-f" d="M9.992,9.421l.465-3.031H7.548V4.423A1.516,1.516,0,0,1,9.257,2.785h1.322V.2A16.124,16.124,0,0,0,8.232,0c-2.4,0-3.961,1.452-3.961,4.08V6.39H1.609V9.421H4.272v7.327H7.548V9.421Z" transform="translate(-1.609)"/>
                             </svg>
@@ -64,14 +56,6 @@
                     </li>
                     <li class="facebook-links">
                         <a href="https://www.facebook.com/Institut.Issep">
-                            <!--<svg xmlns="http://www.w3.org/2000/svg" width="11.096" height="20.717"
-                                 viewBox="0 0 11.096 20.717" class="facebook">
-                                <title>Le logo du réseau social Facebook</title>
-                                <desc>La lettre F</desc>
-                                <path id="Icon_awesome-facebook-f" data-name="Icon awesome-facebook-f"
-                                      d="M11.978,11.653,12.553,7.9h-3.6V5.471A1.875,1.875,0,0,1,11.07,3.445h1.635V.253A19.944,19.944,0,0,0,9.8,0C6.839,0,4.9,1.8,4.9,5.046V7.9H1.609v3.749H4.9v9.064H8.956V11.653Z"
-                                      transform="translate(-1.609)"/>
-                            </svg>-->
                             <svg xmlns="http://www.w3.org/2000/svg" width="8.97" height="16.748" viewBox="0 0 8.97 16.748">
                                 <path id="Icon_awesome-facebook-f" data-name="Icon awesome-facebook-f" d="M9.992,9.421l.465-3.031H7.548V4.423A1.516,1.516,0,0,1,9.257,2.785h1.322V.2A16.124,16.124,0,0,0,8.232,0c-2.4,0-3.961,1.452-3.961,4.08V6.39H1.609V9.421H4.272v7.327H7.548V9.421Z" transform="translate(-1.609)"/>
                             </svg>
@@ -84,6 +68,8 @@
             </li>
         </ul>
     </div>
+    <p class="footer__nat">
+        Site réalisé par Natacha Belboom dans le cadre de la <a href="#">formation</a> à l'hepl</p>
 </footer>
 <div class="overlay"></div>
 <script type="text/javascript" src="<?= noair_mix('js/script.js'); ?>"></script>

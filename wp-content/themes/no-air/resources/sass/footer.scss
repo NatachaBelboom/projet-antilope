@@ -20,6 +20,21 @@
   & a {
     cursor: pointer;
   }
+
+  &__nat{
+    display: block;
+    margin: 0 auto;
+    max-width: 419px;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+
+    & a{
+      color: black;
+      font-size: 1.2rem;
+    }
+  }
 }
 
 .facebook-btn {
@@ -90,13 +105,28 @@
 
 @media (min-width: 900px) {
   .footer {
-    margin: 4rem 10.4rem;
+    margin: 4rem 10.4rem 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     &__copyright, &__mentions {
       font-size: 1.6rem;
+    }
+
+    &__nat{
+      display: block;
+      margin: 0 auto;
+      max-width: 505px;
+      font-size: 1.4rem;
+      text-align: center;
+      line-height: 1.5;
+      margin-bottom: 4rem;
+
+      & a{
+        color: black;
+        font-size: 1.4rem;
+      }
     }
   }
 

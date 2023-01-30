@@ -6,9 +6,6 @@
             <div class="layout__landing landing">
                 <div class="landing__gradient"></div>
                 <div class="landing__img"></div>
-                <!--<figure class="landing__fig">
-                    <?/*= get_the_post_thumbnail(null, 'large', ['class' => 'landing__thumb']) */?>
-                </figure>-->
                 <div class="landing__intro slide-in">
                     <p><?= get_the_content(); ?></p>
                     <a href="<?= get_post_type_archive_link('product'); ?>" class="landing__link link">
@@ -25,11 +22,11 @@
         <section class="layout__presentation presentation slide-in">
             <div>
                 <h2 class="title" role="heading" aria-level="2">
-                    <span class="light">Qu'est-ce que </span>Le projet NOair
+                    <span class="light">Qu'est-ce que </span>Le projet Antilopinae
                 </h2>
                 <?= get_field('about_text'); ?>
                 <a href="<?= get_permalink(noair_get_template_page('template-about')); ?>" class="presentation__link link">
-                    En savoir plus <span class="sro">sur NOair</span>
+                    En savoir plus <span class="sro">sur Antilopinae</span>
                     <?php noair_include('arrow-next'); ?>
                 </a>
             </div>
@@ -58,9 +55,7 @@
                     else: ?>
                         <p class="products__empty">Il n'y a pas encore de modules a présenter</p>
                     <?php endif; ?>
-                    <?php
-                    // Reset the global post object so that the rest of the page works correctly.
-                    wp_reset_postdata(); ?>
+                    <?php wp_reset_postdata(); ?>
                 </div>
             </div>
         </section>
@@ -96,9 +91,7 @@
                 endwhile; else: ?>
                     <p class="products__empty">Nous n'avons pas encore de partenaire</p>
                 <?php endif; ?>
-                <?php
-                // Reset the global post object so that the rest of the page works correctly.
-                wp_reset_postdata(); ?>
+                <?php wp_reset_postdata(); ?>
             </div>
         </section>
 

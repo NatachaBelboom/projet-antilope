@@ -1,7 +1,5 @@
 .about{
-
   &__infos{
-
     display: flex;
     flex-direction: column;
 
@@ -27,6 +25,7 @@
     }
   }
 }
+
 
 .flexReverse{
   display: flex;
@@ -56,7 +55,6 @@
     height: auto;
     border-radius: 1.5rem;
   }
-
 }
 .campaign{
   line-height: 1.8;
@@ -84,6 +82,7 @@
       grid-template-columns: repeat(2, 1fr);
       grid-column-gap: 2.4rem;
       margin-bottom: $spaceL;
+      align-items: flex-start;
 
       & figure{
         display: flex;
@@ -92,7 +91,6 @@
         height: 360px;
         overflow: hidden;
       }
-
     }
   }
 
@@ -101,11 +99,11 @@
     flex-direction: column-reverse;
     gap: 3rem;
     line-height: 1.8;
+    justify-content: flex-end;
 
     &__description{
       margin-bottom: 0;
     }
-
   }
 
   .campaign-grid{

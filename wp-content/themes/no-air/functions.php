@@ -34,14 +34,11 @@ function dw_init_php_session()
     }
 }
 
-
 // Désactiver l'éditeur "Gutenberg" de Wordpress
 add_filter('use_block_editor_for_post', '__return_false');
 
 // Activer les images sur les articles
 add_theme_support('post-thumbnails');
-
-
 
 // enregistrer un custom post type module
 register_post_type('product', [
@@ -141,7 +138,7 @@ register_post_type('estimation', [
         'singular_name' => 'Estimations',
     ],
     'description' => "Les messages envoyés par les utilisateurs via le formulaire d\'estimations",
-    'public' => true, //accessible dans l'interface admin (formulaire de contact: false)
+    'public' => false, //accessible dans l'interface admin (formulaire de contact: false)
     'show_ui' => true,
     'menu_position' => 10,
     'menu_icon' => 'dashicons-buddicons-pm',
@@ -192,7 +189,6 @@ function noair_get_form_field_error($field, $form)
     return '<p class="form__error">' . $_SESSION[$form]['errors'][$field] . '</p>';
 }
 
-
 //Enregistrer les menus de navigation
 register_nav_menu('primary', 'Emplacement de la navigation principale de haut de page');
 
@@ -203,13 +199,10 @@ function noair_get_menu_items($location)
     // Récuperer le menu qui correspond a l'emplacement souhaité
 
     $items = [];
-
     $locations = get_nav_menu_locations(); //fonction retourne un tableau de plusieurs emplacement
-
     if(!$locations[$location] ?? false){
         return $items;
     }
-
     $menu = $locations[$location];
 
     // Récuperer tous les éléments du menu en question
@@ -218,11 +211,9 @@ function noair_get_menu_items($location)
     // Traiter chaque éléments du menu pour les transformer en objet
     foreach ($posts as $post){
         // Créer une instance d'un objet personnalisé à partir de $post
-
         $item = new MenuItem($post);
 
         // Ajouter cette instance soit à $items (s'il s'agit d'un element de niveau 0), soit en tant que sous élément d'un item déja existant
-
         if(!$item->isSubItems()){
             $items[] = $item;
             continue;
@@ -231,7 +222,6 @@ function noair_get_menu_items($location)
         //ajouter l'einstance comme enfant d'un item existant
         foreach ($items as $existing){
             if(!$existing->isParentFor($item)) continue;
-
             $existing->addSubItem($item);
         }
     }
@@ -482,3 +472,4 @@ function noair_calc_estimation_price_form(
 
     return $total;
 }
+
